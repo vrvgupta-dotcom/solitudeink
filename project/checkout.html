@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout — Solitude Ink</title>
+<link rel="stylesheet" href="assets/css/solitude.css">
+</head>
+<body>
+
+<!-- ============ NAV (minimal during checkout) ============ -->
+<nav class="nav is-scrolled" style="position: sticky; padding: 16px var(--gutter);">
+  <a href="index.html" class="nav__brand">
+    <svg viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="mark">
+      <path d="M13 2C15 6 19 8 21 12C23 16 22 20 19 22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M14 2C12 4 11 6 11 9C11 13 14 16 14 20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+      <ellipse cx="13" cy="24" rx="6" ry="2" stroke="currentColor" stroke-width="1" fill="none"/>
+      <path d="M13 26L13 30L11.5 30" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+    </svg>
+    <span>Solitude Ink</span>
+  </a>
+  <div style="text-align: center; font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: rgba(243,232,210,0.55);">Secure Checkout</div>
+  <div class="nav__right">
+    <a href="index.html" style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:rgba(243,232,210,0.6);">← Back to home</a>
+  </div>
+</nav>
+
+<!-- ============ CHECKOUT ============ -->
+<section class="checkout" data-screen-label="Checkout">
+  <div class="wrap">
+
+    <div class="checkout__grid">
+
+      <!-- ===== MAIN ===== -->
+      <div class="checkout__main">
+
+        <!-- Steps -->
+        <div class="steps" id="steps">
+          <div class="step is-active" data-step="1">
+            <span class="step__num">1</span>
+            <span>Delivery</span>
+          </div>
+          <span class="step__sep"></span>
+          <div class="step" data-step="2">
+            <span class="step__num">2</span>
+            <span>Payment</span>
+          </div>
+          <span class="step__sep"></span>
+          <div class="step" data-step="3">
+            <span class="step__num">3</span>
+            <span>Confirmation</span>
+          </div>
+        </div>
+
+        <!-- ===== STEP 1: Delivery ===== -->
+        <div class="step-panel" data-panel="1">
+          <span class="rule">Step One · Where it should arrive</span>
+          <h2 style="font-family: var(--serif); font-size: clamp(36px, 4vw, 56px); font-weight: 300; line-height: 1.05; margin: 18px 0 36px;">Tell us <em style="font-style:italic; color: var(--gold-bright);">where to send it.</em></h2>
+
+          <form id="form-delivery" onsubmit="event.preventDefault(); goStep(2);">
+
+            <div class="field-row">
+              <div class="field">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" required placeholder="Anaisha" value="">
+              </div>
+              <div class="field">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" required placeholder="Roy">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" required placeholder="you@quiet.in">
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" required placeholder="+91 ··· ··· ····">
+            </div>
+
+            <div class="field">
+              <label for="addr1">Address Line</label>
+              <input type="text" id="addr1" required placeholder="House number, street">
+            </div>
+
+            <div class="field">
+              <label for="addr2">Apartment, building (optional)</label>
+              <input type="text" id="addr2" placeholder="Flat 04, Curzon Apartments">
+            </div>
+
+            <div class="field-row-3">
+              <div class="field">
+                <label for="city">City</label>
+                <input type="text" id="city" required placeholder="Bombay">
+              </div>
+              <div class="field">
+                <label for="state">State</label>
+                <input type="text" id="state" required placeholder="Maharashtra">
+              </div>
+              <div class="field">
+                <label for="pin">PIN Code</label>
+                <input type="text" id="pin" required placeholder="400 001">
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="country">Country</label>
+              <select id="country">
+                <option>India</option>
+                <option>United Kingdom · +₹1,400</option>
+                <option>United States · +₹1,800</option>
+                <option>Singapore · +₹1,200</option>
+                <option>UAE · +₹1,100</option>
+              </select>
+            </div>
+
+            <!-- Shipping method -->
+            <div style="margin-top: 36px;">
+              <h4 style="font-family: var(--sans); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: rgba(243,232,210,0.55); margin: 0 0 16px; font-weight: 500;">Shipping</h4>
+              <div class="radio-group">
+                <label class="radio-card">
+                  <input type="radio" name="ship" value="standard" checked>
+                  <span class="dot"></span>
+                  <div>
+                    <div class="label-main">Standard · Boxed, hand-wrapped</div>
+                    <div class="label-sub">4–7 business days after pressing</div>
+                  </div>
+                  <span class="label-price">Complimentary</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="ship" value="express">
+                  <span class="dot"></span>
+                  <div>
+                    <div class="label-main">Express · Priority dispatch</div>
+                    <div class="label-sub">2–3 business days · India only</div>
+                  </div>
+                  <span class="label-price">₹450</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="ship" value="gift">
+                  <span class="dot"></span>
+                  <div>
+                    <div class="label-main">Gift · Hand-written note</div>
+                    <div class="label-sub">Standard delivery, wax-sealed gift envelope</div>
+                  </div>
+                  <span class="label-price">+ ₹240</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Note -->
+            <div class="field" style="margin-top: 24px;">
+              <label for="note">A note for the press (optional)</label>
+              <textarea id="note" rows="2" placeholder="Anything you'd like to say to Yatendra, or a dedication for the gift card."></textarea>
+            </div>
+
+            <!-- Step controls -->
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--ink-line); gap: 16px; flex-wrap: wrap;">
+              <a href="index.html" class="link-arrow" style="border:0; padding:0; color: rgba(243,232,210,0.5);">← Return to bookshop</a>
+              <button type="submit" class="btn btn--gold btn--lg">
+                Continue to Payment
+                <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ===== STEP 2: Payment ===== -->
+        <div class="step-panel" data-panel="2" style="display: none;">
+          <span class="rule">Step Two · Quiet payment</span>
+          <h2 style="font-family: var(--serif); font-size: clamp(36px, 4vw, 56px); font-weight: 300; line-height: 1.05; margin: 18px 0 36px;">A small <em style="font-style:italic; color: var(--gold-bright);">exchange.</em></h2>
+
+          <form id="form-payment" onsubmit="event.preventDefault(); goStep(3);">
+
+            <div style="margin-bottom: 32px;">
+              <h4 style="font-family: var(--sans); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: rgba(243,232,210,0.55); margin: 0 0 16px; font-weight: 500;">Method</h4>
+              <div class="radio-group">
+                <label class="radio-card">
+                  <input type="radio" name="pay" value="card" checked>
+                  <span class="dot"></span>
+                  <div>
+                    <div class="label-main">Card · Visa, Mastercard, Amex, Rupay</div>
+                    <div class="label-sub">Secured by Razorpay · 256-bit TLS</div>
+                  </div>
+                  <span style="display:flex; gap: 6px;">
+                    <span style="font-size:10px; padding: 4px 8px; border:1px solid var(--ink-line); color: rgba(243,232,210,0.6); font-family: var(--serif); font-style: italic;">Visa</span>
+                    <span style="font-size:10px; padding: 4px 8px; border:1px solid var(--ink-line); color: rgba(243,232,210,0.6); font-family: var(--serif); font-style: italic;">MC</span>
+                  </span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="pay" value="upi">
+                  <span class="dot"></span>
+                  <div>
+                    <div class="label-main">UPI · PhonePe, GPay, Paytm</div>
+                    <div class="label-sub">Instant · India only</div>
+                  </div>
+                  <span style="font-size:10px; padding: 4px 10px; border:1px solid var(--gold-soft); color: var(--gold); font-family: var(--sans); letter-spacing:.2em; text-transform: uppercase;">Recommended</span>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="pay" value="netbank">
+                  <span class="dot"></span>
+                  <div>
+                    <div class="label-main">Net Banking</div>
+                    <div class="label-sub">All major banks</div>
+                  </div>
+                  <span></span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Card fields (shown when card selected) -->
+            <div id="card-fields">
+              <div class="field">
+                <label for="card-name">Cardholder Name</label>
+                <input type="text" id="card-name" placeholder="As it appears on the card">
+              </div>
+              <div class="field">
+                <label for="card-no">Card Number</label>
+                <input type="text" id="card-no" placeholder="4242 4242 4242 4242" maxlength="19">
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label for="card-exp">Expiry</label>
+                  <input type="text" id="card-exp" placeholder="MM / YY" maxlength="7">
+                </div>
+                <div class="field">
+                  <label for="card-cvc">CVC</label>
+                  <input type="text" id="card-cvc" placeholder="•••" maxlength="4">
+                </div>
+              </div>
+
+              <label style="display:flex; gap: 12px; align-items: center; margin-top: 16px; cursor:pointer;">
+                <input type="checkbox" style="width:18px; height:18px; accent-color: var(--gold);">
+                <span style="font-size: 13px; color: rgba(243,232,210,0.7);">Save this card for future Solitude Ink pressings.</span>
+              </label>
+            </div>
+
+            <!-- Step controls -->
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--ink-line); gap: 16px; flex-wrap: wrap;">
+              <button type="button" class="link-arrow" style="border:0; padding:0; color: rgba(243,232,210,0.5); background:none;" onclick="goStep(1)">← Back to delivery</button>
+              <button type="submit" class="btn btn--gold btn--lg">
+                Place Pre-order
+                <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- ===== STEP 3: Confirmation ===== -->
+        <div class="step-panel" data-panel="3" style="display: none;">
+          <div class="complete reveal is-in">
+            <div class="complete__seal">
+              <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
+            </div>
+            <span class="rule rule--center" style="display:inline-flex; margin: 0 auto;">A small confirmation</span>
+            <h2 style="margin-top: 20px;">Thank you for <em>reading slowly.</em></h2>
+            <p>Your pre-order has been received. A confirmation has been sent to <strong id="confirm-email" style="font-family: var(--serif); font-style: italic; color: var(--gold);">your inbox</strong>.</p>
+            <p>The First Pressing ships from <em style="color: var(--gold-bright);">Monsoon 2026</em>. Until then, the books rest, and so do you.</p>
+
+            <p class="complete__order">Order No. <span id="confirm-order" style="color: var(--ivory);">SI · 2026 · 0247</span></p>
+
+            <div style="display:flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 36px;">
+              <a href="index.html" class="btn btn--gold">Return to the bookshop</a>
+              <a href="index.html#immersive" class="btn btn--ghost">Read a poem while you wait</a>
+            </div>
+
+            <p style="margin-top: 56px; font-family: var(--hand); font-size: 36px; line-height: 1; color: var(--gold-bright);">— Yatendra</p>
+            <p class="small" style="margin: 8px auto 0;">A handwritten note will accompany every set.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== ORDER SUMMARY (side) ===== -->
+      <aside class="checkout__side">
+        <h3 style="font-family: var(--serif); font-size: 22px; font-weight: 400; margin: 0 0 4px;">Order Summary</h3>
+        <span class="small" style="display:block; margin-bottom: 22px;">Your reading list</span>
+
+        <div id="summary-items"></div>
+
+        <div class="summary-totals">
+          <div class="cart__row"><span>Subtotal</span><span id="sum-sub">—</span></div>
+          <div class="cart__row"><span>Shipping</span><span id="sum-ship">Complimentary</span></div>
+          <div class="cart__row"><span>Pre-order discount</span><span style="color: var(--gold);" id="sum-disc">— ₹800</span></div>
+          <div class="cart__row total"><span>Total</span><span id="sum-total">—</span></div>
+        </div>
+
+        <div style="margin-top: 22px; padding: 18px; border: 1px solid var(--gold-soft); background: rgba(201,169,106,0.04);">
+          <p style="margin: 0; font-family: var(--serif); font-style: italic; font-size: 14.5px; color: var(--gold-bright); line-height: 1.5;">"Crafted slowly, in a small number, for readers who keep the lights low."</p>
+          <p class="small" style="margin: 10px 0 0;">— Solitude Ink, Pressing No. 01</p>
+        </div>
+
+        <!-- Promo -->
+        <details style="margin-top: 22px; border-top: 1px solid var(--ink-line); padding-top: 18px;">
+          <summary style="cursor: pointer; font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: rgba(243,232,210,0.55); list-style: none;">+ Apply a promotion code</summary>
+          <div style="display:flex; gap: 8px; margin-top: 14px;">
+            <input type="text" placeholder="MONSOON26" style="flex:1; padding: 12px 14px; background: transparent; border: 1px solid var(--ink-line); color: var(--ivory); font-family: var(--serif); font-size: 16px; letter-spacing: .04em;">
+            <button class="btn btn--ghost btn--sm">Apply</button>
+          </div>
+        </details>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER (minimal) ============ -->
+<footer style="padding: 40px var(--gutter); border-top: 1px solid var(--ink-line); background: #050402;">
+  <div style="max-width: var(--max); margin: 0 auto; display:flex; justify-content:space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: rgba(243,232,210,0.4);">
+    <span>Solitude Ink · Books for the Inward Journey</span>
+    <div style="display:flex; gap: 28px;">
+      <span style="display:inline-flex; align-items:center; gap:8px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        256-bit TLS · Razorpay
+      </span>
+      <a href="#">Help</a>
+      <a href="mailto:hello@solitudeink.in">hello@solitudeink.in</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/solitude.js"></script>
+<script>
+  // ----- Render summary from cart -----
+  function inrLocal(n) { return '₹' + n.toLocaleString('en-IN'); }
+
+  function renderSummary() {
+    const cart = window.SolitudeCart;
+    const items = cart.read();
+    const wrap = document.getElementById('summary-items');
+
+    // If empty, seed with collector edition so the demo always shows something
+    if (!items.length) {
+      cart.add('collector', 1);
+      return; // will recurse via cart:changed
+    }
+
+    wrap.innerHTML = items.map(it => {
+      const p = cart.CATALOG[it.id];
+      return '<div class="summary-item">' +
+        '<img src="' + p.img + '" alt="">' +
+        '<div>' +
+          '<div class="summary-item__title">' + p.title + '</div>' +
+          '<div class="summary-item__sub">' + p.kind + ' · Qty ' + it.qty + '</div>' +
+        '</div>' +
+        '<div class="summary-item__price">' + inrLocal(p.price * it.qty) + '</div>' +
+      '</div>';
+    }).join('');
+
+    let sub = cart.subtotal();
+    const ship = sub >= 3000 ? 0 : 180;
+    // Pre-order discount only if collector in cart
+    const hasCollector = items.some(i => i.id === 'collector');
+    const disc = hasCollector ? 800 * (items.find(i => i.id === 'collector').qty || 1) : 0;
+
+    document.getElementById('sum-sub').textContent = inrLocal(sub);
+    document.getElementById('sum-ship').textContent = ship === 0 ? 'Complimentary' : inrLocal(ship);
+    document.getElementById('sum-disc').textContent = disc > 0 ? ('— ' + inrLocal(disc)) : 'Not applied';
+    document.getElementById('sum-disc').style.color = disc > 0 ? 'var(--gold)' : 'rgba(243,232,210,0.5)';
+    document.getElementById('sum-total').textContent = inrLocal(sub + ship - disc);
+  }
+
+  document.addEventListener('cart:changed', renderSummary);
+  renderSummary();
+
+  // ----- Steps -----
+  window.goStep = function(n) {
+    document.querySelectorAll('.step-panel').forEach(p => p.style.display = 'none');
+    const target = document.querySelector('[data-panel="' + n + '"]');
+    if (target) target.style.display = 'block';
+
+    document.querySelectorAll('.step').forEach(s => {
+      const num = parseInt(s.dataset.step, 10);
+      s.classList.toggle('is-active', num === n);
+      s.classList.toggle('is-done', num < n);
+    });
+
+    // On confirmation: fill email + order
+    if (n === 3) {
+      const em = document.getElementById('email').value || 'your inbox';
+      document.getElementById('confirm-email').textContent = em;
+      const order = 'SI · 2026 · ' + String(Math.floor(100 + Math.random() * 900)).padStart(4, '0');
+      document.getElementById('confirm-order').textContent = order;
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Step click to navigate backwards
+  document.querySelectorAll('.step').forEach(s => {
+    s.style.cursor = 'pointer';
+    s.addEventListener('click', () => {
+      const n = parseInt(s.dataset.step, 10);
+      // Allow going back, or to a done step
+      const active = document.querySelector('.step.is-active');
+      const curr = active ? parseInt(active.dataset.step, 10) : 1;
+      if (n < curr) goStep(n);
+    });
+  });
+</script>
+</body>
+</html>
