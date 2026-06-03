@@ -3,16 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The First Movement Collection — Solitude Ink</title>
-<meta name="description" content="A collector edition of three clothbound hardcover books by Yatendra Chandra. Limited first pressing of 500.">
+<title>The Edition — आत्म-मिलन – आत्म-विरह · Solitude Ink</title>
+<meta name="description" content="Reserve your hand-numbered set of आत्म-मिलन – आत्म-विरह. Two editions: the Hardcover Universe and the Signature Numbered Universe. The price rises as numbers are claimed.">
 <link rel="stylesheet" href="assets/css/solitude.css">
 </head>
 <body>
 
-<!-- ============ SCARCITY RIBBON ============ -->
-<div class="scarcity">
-  <span class="scarcity__label">Pre-order open · First Pressing Limited to 500</span>
-  <div class="scarcity__timer" data-countdown></div>
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <span class="topbar__live"><span class="topbar__pulse"></span> Pre-launch</span>
+  <span class="topbar__dot topbar__hide-sm"></span>
+  <span class="topbar__hide-sm">The Edition opens at <strong data-ed-current>$300</strong> and rises as it sells</span>
+  <span class="topbar__dot"></span>
+  <span><strong data-ed-reserve-no>No. 0341</strong> of <span data-ed-total>2,000</span> · your number</span>
 </div>
 
 <!-- ============ NAV ============ -->
@@ -27,59 +30,66 @@
     <span>Solitude Ink</span>
   </a>
   <div class="nav__links">
-    <a href="index.html#collector" class="is-active">The Collection</a>
-    <a href="index.html#books">The Books</a>
-    <a href="index.html#immersive">Read</a>
+    <a href="index.html#price">The Price</a>
+    <a href="index.html#editions" class="is-active">The Editions</a>
+    <a href="index.html#movements">The Ten</a>
+    <a href="index.html#read">Read</a>
     <a href="index.html#author">Author</a>
-    <a href="index.html#reviews">Reviews</a>
   </div>
   <div class="nav__right">
     <a href="index.html" style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:rgba(243,232,210,0.7);">Home</a>
-    <button class="nav__cart" data-cart-open aria-label="Open reading list">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 6h16l-1.5 12a2 2 0 0 1-2 1.8H7.5a2 2 0 0 1-2-1.8L4 6z"/><path d="M9 10V5a3 3 0 0 1 6 0v5"/></svg>
-      <span>List</span>
+    <button class="nav__cart" data-cart-open aria-label="Open reservations">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      <span>Reserved</span>
       <span class="nav__cart-count" data-cart-count style="display:none">0</span>
+    </button>
+    <button class="nav__burger" data-burger aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- ============ HERO / PRODUCT ============ -->
-<section class="section" id="detail" style="padding-top: 140px; background: radial-gradient(ellipse at 50% 0%, rgba(201,169,106,0.08), transparent 60%), linear-gradient(180deg, #050402 0%, #0b0907 100%);" data-screen-label="Product Hero">
-  <div class="wrap">
+<!-- Mobile menu -->
+<div class="nav__mobile-menu" data-mobile-menu>
+  <button class="nav__mobile-close" data-burger-close aria-label="Close menu">×</button>
+  <a href="index.html" data-mobile-link>Home</a>
+  <div class="menu-divider"></div>
+  <a href="index.html#price" data-mobile-link>The Price</a>
+  <div class="menu-divider"></div>
+  <a href="index.html#editions" data-mobile-link>The Editions</a>
+  <div class="menu-divider"></div>
+  <a href="index.html#movements" data-mobile-link>The Ten</a>
+  <div class="menu-divider"></div>
+  <a href="index.html#read" data-mobile-link>Read</a>
+  <a href="collector.html" class="menu-reserve" data-mobile-link>Reserve your number</a>
+</div>
 
-    <!-- Breadcrumb -->
+<!-- ============ PRODUCT ============ -->
+<section class="section" id="detail" style="padding-top: 130px; background: radial-gradient(ellipse at 50% 0%, rgba(201,169,106,0.08), transparent 60%), linear-gradient(180deg, #050402 0%, #0b0907 100%);" data-screen-label="Reserve">
+  <div class="wrap">
     <nav class="small" style="margin-bottom: 36px; display:flex; gap: 10px; align-items:center;">
       <a href="index.html" style="color: rgba(243,232,210,0.5);">Solitude Ink</a>
       <span style="color: rgba(243,232,210,0.3);">/</span>
-      <a href="index.html#collector" style="color: rgba(243,232,210,0.5);">Collector Editions</a>
+      <a href="index.html#editions" style="color: rgba(243,232,210,0.5);">The Edition</a>
       <span style="color: rgba(243,232,210,0.3);">/</span>
-      <span style="color: var(--gold);">The First Movement</span>
+      <span style="color: var(--gold);">Reserve your number</span>
     </nav>
 
     <div class="collector__stage" style="align-items: start;">
-
       <!-- Gallery -->
       <div>
         <div class="collector__hero-img reveal" id="gallery-main" style="aspect-ratio: 5/4;">
-          <img src="assets/img/collector-dark.jpg" alt="The First Movement Collection — main view">
+          <img src="assets/img/si-slipcase-dark.jpg" alt="आत्म-मिलन – आत्म-विरह — the slipcase and ten clothbound spines">
         </div>
-        <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 14px;" id="gallery-thumbs">
-          <button class="craft__cell" style="aspect-ratio:1; cursor:pointer; padding:0; border:1px solid var(--gold);" data-gal="assets/img/collector-dark.jpg">
-            <img src="assets/img/collector-dark.jpg" alt="">
-          </button>
-          <button class="craft__cell" style="aspect-ratio:1; cursor:pointer; padding:0;" data-gal="assets/img/collector-natural.jpg">
-            <img src="assets/img/collector-natural.jpg" alt="">
-          </button>
-          <button class="craft__cell" style="aspect-ratio:1; cursor:pointer; padding:0;" data-gal="assets/img/collector-ivory.jpg">
-            <img src="assets/img/collector-ivory.jpg" alt="">
-          </button>
-          <button class="craft__cell" style="aspect-ratio:1; cursor:pointer; padding:0;" data-gal="assets/img/book2-mockup.jpg">
-            <img src="assets/img/book2-mockup.jpg" alt="">
-          </button>
+        <div style="display:grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin-top: 14px;" id="gallery-thumbs">
+          <button class="craft__cell" style="aspect-ratio:1; cursor:pointer; padding:0; border:1px solid var(--gold);" data-gal="assets/img/si-slipcase-dark.jpg"><img src="assets/img/si-slipcase-dark.jpg" alt=""></button>
+          <button class="craft__cell" style="aspect-ratio:1; cursor:pointer; padding:0;" data-gal="assets/img/si-slipcase-ivory.jpg"><img src="assets/img/si-slipcase-ivory.jpg" alt=""></button>
+          <button class="craft__cell" style="aspect-ratio:1; cursor:pointer; padding:0;" data-gal="assets/img/book1-mockup.jpg"><img src="assets/img/book1-mockup.jpg" alt=""></button>
+          <button class="craft__cell" style="aspect-ratio:1; cursor:pointer; padding:0;" data-gal="assets/img/book2-mockup.jpg"><img src="assets/img/book2-mockup.jpg" alt=""></button>
+          <button class="craft__cell" style="aspect-ratio:1; cursor:pointer; padding:0;" data-gal="assets/img/book3-mockup.jpg"><img src="assets/img/book3-mockup.jpg" alt=""></button>
         </div>
 
-        <!-- Pressed mark -->
-        <div style="margin-top: 56px; padding: 28px 32px; border: 1px solid var(--ink-line); display:flex; gap: 22px; align-items: center;">
+        <div style="margin-top: 48px; padding: 28px 32px; border: 1px solid var(--ink-line); display:flex; gap: 22px; align-items: center;">
           <svg viewBox="0 0 26 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:30px; height:36px; color:var(--gold); flex:none;">
             <path d="M13 2C15 6 19 8 21 12C23 16 22 20 19 22" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
             <path d="M14 2C12 4 11 6 11 9C11 13 14 16 14 20" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
@@ -87,8 +97,8 @@
             <path d="M13 26L13 30L11.5 30" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
           </svg>
           <div>
-            <p class="small" style="margin: 0 0 4px;">Pressing No. 01 · Solitude Ink</p>
-            <p style="margin:0; font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--ivory); line-height: 1.5;">"Crafted slowly, in a small number, for readers who keep the lights low."</p>
+            <p class="small" style="margin: 0 0 4px;">A finite pressing · Solitude Ink, Bombay</p>
+            <p style="margin:0; font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--ivory); line-height: 1.5;">"Pressed once. When the last set is sold, the universe closes."</p>
           </div>
         </div>
       </div>
@@ -96,107 +106,105 @@
       <!-- Buy panel -->
       <div class="collector__detail reveal reveal-delay-1" style="padding-top:0;">
         <div>
-          <span class="rule" style="margin-bottom:18px; display:inline-flex;">Collector Edition <span class="ornament"></span> 01 / 500</span>
-          <h1 class="display-xl" style="line-height: 0.98; font-weight: 300; margin: 0 0 12px;">The First<br><em style="font-style:italic; color:var(--gold-bright);">Movement</em></h1>
-          <p class="lede" style="margin: 0 0 28px;">Three books. One inward journey. Hand-bound in cloth and antique gold foil.</p>
+          <span class="rule" style="margin-bottom:18px; display:inline-flex;">A finite literary universe</span>
+          <h1 class="deva-title" style="font-size: clamp(34px,4vw,58px); margin: 0 0 10px; color: var(--ivory);">आत्म-मिलन – आत्म-<span style="color:var(--gold-bright);">विरह</span></h1>
+          <p class="lede" style="margin: 0 0 26px;">Ten clothbound books. One inward journey. Hand-numbered to 2,000 sets, and offered once.</p>
 
+          <!-- live price -->
           <div class="collector__price">
-            <span class="collector__price-now">₹4,800</span>
-            <span class="collector__price-was">₹5,600</span>
+            <span class="collector__price-now" data-ed-current>$300</span>
+            <span class="collector__price-note" style="align-self:center;">→ rises to $580</span>
           </div>
-          <span class="collector__price-note">Pre-order pricing · Saves ₹800 · Ships Monsoon 2026</span>
+          <span class="collector__price-note">Your number would be <span data-ed-reserve-num style="color:var(--gold-bright);">0341</span> · <span data-ed-remaining-tier>160</span> sets remain at this price</span>
+
+          <!-- Edition choice -->
+          <div style="margin-top: 30px;">
+            <h4 style="font-family: var(--sans); font-size: 10px; letter-spacing:.3em; text-transform: uppercase; color: rgba(243,232,210,0.55); margin: 0 0 14px; font-weight: 500;">Choose your edition</h4>
+            <div class="radio-group" id="edition-choice">
+              <label class="radio-card">
+                <input type="radio" name="edition" value="hardcover" checked>
+                <span class="dot"></span>
+                <div>
+                  <div class="label-main">The Hardcover Universe</div>
+                  <div class="label-sub">Ten clothbound books · slipcase · certificate</div>
+                </div>
+                <span class="label-price" data-ed-hardcover>$300</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="edition" value="signature">
+                <span class="dot"></span>
+                <div>
+                  <div class="label-main">The Signature Numbered Universe</div>
+                  <div class="label-sub">Numbered &amp; signed · hand-written note · finer binding</div>
+                </div>
+                <span class="label-price" data-ed-signature>$600</span>
+              </label>
+            </div>
+          </div>
 
           <div class="collector__includes">
-            <h4>Each Collector Set Includes</h4>
+            <h4>Every set includes</h4>
             <ul>
-              <li><span>i</span>Three clothbound hardcovers <span>Books 1–3</span></li>
-              <li><span>ii</span>Premium slipcase, foil-stamped <span>Hand-pressed</span></li>
-              <li><span>iii</span>Author's note <span>Signed by hand</span></li>
-              <li><span>iv</span>Three silk ribbon markers <span>One per book</span></li>
-              <li><span>v</span>Numbered collector's card <span>01–500</span></li>
-              <li><span>vi</span>Solitude Ink wax-sealed envelope <span>Letter from the press</span></li>
+              <li><span>i</span>Ten clothbound hardcovers <span>Books I–X</span></li>
+              <li><span>ii</span>Foil-stamped slipcase <span>Hand-pressed</span></li>
+              <li><span>iii</span>Certificate of authenticity <span>Numbered</span></li>
+              <li><span>iv</span>Ten silk ribbon markers <span>One per book</span></li>
+              <li><span>v</span>Hand-written author's note <span>Signature edition</span></li>
             </ul>
           </div>
 
           <div class="stock-bar">
-            <div class="stock-bar__track"><div class="stock-bar__fill" style="width: 32%;"></div></div>
+            <div class="stock-bar__track"><div class="stock-bar__fill" data-ed-fill style="width: 17%;"></div></div>
             <div class="stock-bar__meta">
-              <span>First Pressing</span>
-              <span class="stock-bar__count">158 of 500 remaining</span>
-            </div>
-          </div>
-
-          <!-- Variants -->
-          <div style="margin-top: 28px;">
-            <h4 style="font-family: var(--sans); font-size: 10px; letter-spacing:.3em; text-transform: uppercase; color: rgba(243,232,210,0.55); margin: 0 0 14px; font-weight: 500;">Cloth Finish</h4>
-            <div style="display:flex; gap: 12px;">
-              <label class="finish-chip is-selected">
-                <input type="radio" name="finish" value="dark" checked>
-                <span class="finish-swatch" style="background: linear-gradient(135deg, #1a1610, #050402); border-color: var(--gold);"></span>
-                <span class="finish-label">Inkwell Black<em>Default</em></span>
-              </label>
-              <label class="finish-chip">
-                <input type="radio" name="finish" value="natural">
-                <span class="finish-swatch" style="background: linear-gradient(135deg, #e8dcc4, #b5a378);"></span>
-                <span class="finish-label">Natural Linen<em>+ ₹400</em></span>
-              </label>
-              <label class="finish-chip">
-                <input type="radio" name="finish" value="ivory">
-                <span class="finish-swatch" style="background: linear-gradient(135deg, #f3e8d2, #cfb98a);"></span>
-                <span class="finish-label">Ivory Press<em>+ ₹400</em></span>
-              </label>
+              <span>The pressing</span>
+              <span class="stock-bar__count"><span data-ed-claimed>340</span> of <span data-ed-total>2,000</span> claimed</span>
             </div>
           </div>
         </div>
 
-        <div style="margin-top: 32px;">
-          <!-- Quantity + Buy -->
+        <div style="margin-top: 30px;">
           <div style="display:flex; gap: 14px; align-items: stretch; margin-bottom: 12px;">
             <div class="qty">
-              <button data-qty-minus="collector" aria-label="Decrease">−</button>
-              <span data-qty-for="collector">1</span>
-              <button data-qty-plus="collector" aria-label="Increase">+</button>
+              <button data-qty-minus="hardcover" aria-label="Decrease">−</button>
+              <span data-qty-for="hardcover">1</span>
+              <button data-qty-plus="hardcover" aria-label="Increase">+</button>
             </div>
-            <button class="btn btn--gold" data-add="collector" style="flex:1;">
-              Add to Reading List
+            <button class="btn btn--gold" id="reserve-btn" data-add="hardcover" style="flex:1;">
+              Reserve — <span id="reserve-price" data-ed-hardcover>$300</span>
               <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
             </button>
           </div>
-          <a href="checkout.html" class="btn btn--ghost" style="width:100%;" onclick="SolitudeCart.add('collector', parseInt(document.querySelector('[data-qty-for=collector]').textContent,10)); event.preventDefault(); setTimeout(()=>location.href='checkout.html', 120);">
-            Buy now — go to checkout
-          </a>
+          <a href="checkout.html" class="btn btn--ghost" id="reserve-checkout" style="width:100%;">Reserve &amp; check out now</a>
 
-          <!-- Shipping estimator -->
           <div style="margin-top: 24px; padding: 20px 0; border-top: 1px solid var(--ink-line); border-bottom: 1px solid var(--ink-line);">
             <div style="display:flex; justify-content:space-between; align-items:center; gap:14px;">
               <div>
-                <p class="small" style="margin:0 0 2px;">Estimated Delivery</p>
-                <p style="margin:0; font-family: var(--serif); font-style: italic; color: var(--gold-bright); font-size: 19px;">Monsoon 2026 · July onwards</p>
+                <p class="small" style="margin:0 0 2px;">Estimated delivery</p>
+                <p style="margin:0; font-family: var(--serif); font-style: italic; color: var(--gold-bright); font-size: 19px;">Monsoon 2026 · presented for keeping</p>
               </div>
               <div style="text-align:right;">
-                <p class="small" style="margin:0 0 2px;">Shipping</p>
-                <p style="margin:0; font-family: var(--serif); color: var(--gold); font-size:15px;">Complimentary · India</p>
+                <p class="small" style="margin:0 0 2px;">Delivery</p>
+                <p style="margin:0; font-family: var(--serif); color: var(--gold); font-size:15px;">White-glove · worldwide</p>
               </div>
             </div>
           </div>
 
-          <!-- Reassurance pills -->
           <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px;">
             <div style="display:flex; align-items:center; gap:10px; font-size: 12px; color: rgba(243,232,210,0.65);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4"><path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 14.5 7.1 17.2 8 11.7 4 7.8 9.5 7z"/></svg>
+              Numbered by hand
+            </div>
+            <div style="display:flex; align-items:center; gap:10px; font-size: 12px; color: rgba(243,232,210,0.65);">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4"><path d="M3 17c3-6 6-9 9-9s4 2 4 4-3 5-6 3"/></svg>
+              Signed by the author
+            </div>
+            <div style="display:flex; align-items:center; gap:10px; font-size: 12px; color: rgba(243,232,210,0.65);">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v6l9 4 9-4V7"/></svg>
-              Signed by the Author
+              White-glove worldwide
             </div>
             <div style="display:flex; align-items:center; gap:10px; font-size: 12px; color: rgba(243,232,210,0.65);">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4"><path d="M12 2v20M2 12h20"/></svg>
-              Numbered 01 / 500
-            </div>
-            <div style="display:flex; align-items:center; gap:10px; font-size: 12px; color: rgba(243,232,210,0.65);">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4"><rect x="3" y="6" width="18" height="14" rx="1"/><path d="M3 10h18"/></svg>
-              Complimentary India shipping
-            </div>
-            <div style="display:flex; align-items:center; gap:10px; font-size: 12px; color: rgba(243,232,210,0.65);">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.4"><path d="M21 12a9 9 0 1 1-3-6.7L21 3v6h-6"/></svg>
-              14-day returns, unopened
+              Today's price, locked
             </div>
           </div>
         </div>
@@ -205,133 +213,56 @@
   </div>
 </section>
 
-<!-- ============ INSIDE THE BOX ============ -->
-<section class="section collector" data-screen-label="Inside the Box">
+<!-- ============ THE PRICE RUNG (mini ladder) ============ -->
+<section class="section ladder section--tight" data-screen-label="The price now">
   <div class="wrap">
     <div class="section-head reveal">
       <div>
-        <span class="rule">Inside the Box <span class="ornament"></span> 06 Objects</span>
-        <h2 class="section-head__title">A small museum, <em>at the foot of your bed.</em></h2>
+        <span class="rule">The price now <span class="ornament"></span> It only rises</span>
+        <h2 class="section-head__title">You are arriving <em>early.</em></h2>
       </div>
-      <p class="section-head__body">Unboxing the First Movement is meant to be a slow, candlelit hour. Every object is included with care, and meant to be kept long after the books are read.</p>
+      <p class="section-head__body">The edition opens at $300 and climbs in published steps as numbers are claimed. Reserving your number locks today's price; it will never be offered lower than it is right now.</p>
+    </div>
+    <div class="ladder__live reveal">
+      <div><p class="k">Reserved so far</p><p class="v sm"><span data-ed-claimed>340</span> <span style="font-size:16px; color:rgba(243,232,210,0.4);">/ <span data-ed-total>2,000</span></span></p><p class="sub">Your number would be <span data-ed-reserve-num>0341</span></p></div>
+      <div><p class="k">Current price</p><p class="v" data-ed-current>$300</p><p class="sub"><span data-ed-remaining-tier>160</span> sets remain at this price</p></div>
+      <div><p class="k">Next step</p><p class="v sm" data-ed-next-no>No. 0501</p><p class="sub">then the price rises to the next rung</p></div>
+    </div>
+    <div class="ladder__progress reveal"><span data-ed-fill style="width:17%;"></span></div>
+    <div style="text-align:center;">
+      <a href="index.html#price" class="link-arrow">See the full price ladder →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSIDE THE SET ============ -->
+<section class="section collector" data-screen-label="Inside the set">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <span class="rule">Inside the set <span class="ornament"></span> The object</span>
+        <h2 class="section-head__title">A small museum, <em>at the foot of the bed.</em></h2>
+      </div>
+      <p class="section-head__body">Unboxing the universe is meant to be a slow, candlelit hour. Every object is included with care, and meant to be kept long after the books are read.</p>
     </div>
 
     <div class="craft__grid">
       <div class="craft__cell reveal">
-        <img src="assets/img/collector-dark.jpg" alt="The slipcase">
-        <div class="craft__caption">
-          <span class="gold">i · The slipcase</span>
-          <h4>Foil-stamped sleeve</h4>
-          <p>Embossed cloth board, gold-pressed by hand at our Bombay press.</p>
-        </div>
+        <img src="assets/img/si-slipcase-dark.jpg" alt="The slipcase">
+        <div class="craft__caption"><span class="gold">i · The slipcase</span><h4>Foil-stamped sleeve</h4><p>Heavy cloth board, gold-pressed by hand at the Bombay press.</p></div>
       </div>
       <div class="craft__cell reveal reveal-delay-1">
-        <img src="assets/img/book1-mockup.jpg" alt="Three hardcovers">
-        <div class="craft__caption">
-          <span class="gold">ii · The three books</span>
-          <h4>Clothbound hardcover</h4>
-          <p>Pehli Baarish, Manasi, Naari Ki Aawaaz. 164 poems across three voices.</p>
-        </div>
+        <img src="assets/img/book1-mockup.jpg" alt="Ten hardcovers">
+        <div class="craft__caption"><span class="gold">ii · The ten books</span><h4>Clothbound hardcover</h4><p>Books I through X — the complete universe, one movement at a time.</p></div>
       </div>
       <div class="craft__cell reveal reveal-delay-2">
-        <img src="assets/img/collector-natural.jpg" alt="Author's note">
-        <div class="craft__caption">
-          <span class="gold">iii · The note</span>
-          <h4>A letter from Yatendra</h4>
-          <p>A printed and hand-signed note, on cream paper, folded in thirds.</p>
-        </div>
+        <img src="assets/img/book2-mockup.jpg" alt="Ribbon markers">
+        <div class="craft__caption"><span class="gold">iii · The markers</span><h4>Silk ribbons (×10)</h4><p>Hand-tasselled. One per book, in a colour chosen for its voice.</p></div>
       </div>
       <div class="craft__cell reveal reveal-delay-3">
-        <img src="assets/img/book3-mockup.jpg" alt="Bookmarks">
-        <div class="craft__caption">
-          <span class="gold">iv · The markers</span>
-          <h4>Silk ribbons (×3)</h4>
-          <p>Hand-tasselled. One per book, in a colour chosen for its voice.</p>
-        </div>
+        <img src="assets/img/si-slipcase-ivory.jpg" alt="Certificate and note">
+        <div class="craft__caption"><span class="gold">iv · The record</span><h4>Number &amp; note</h4><p>A numbered certificate, and — in the Signature edition — a hand-written note.</p></div>
       </div>
-      <div class="craft__cell reveal">
-        <img src="assets/img/collector-ivory.jpg" alt="Collector card">
-        <div class="craft__caption">
-          <span class="gold">v · The card</span>
-          <h4>Numbered card</h4>
-          <p>01 through 500 — your set's number, hand-written.</p>
-        </div>
-      </div>
-      <div class="craft__cell reveal reveal-delay-1">
-        <img src="assets/img/logo-debossed.png" alt="Wax-sealed envelope" style="object-fit: contain; background: #1a1610; padding: 40px;">
-        <div class="craft__caption">
-          <span class="gold">vi · The envelope</span>
-          <h4>Wax-sealed letter</h4>
-          <p>A small letter from the press, sealed in dark gold wax.</p>
-        </div>
-      </div>
-      <div class="craft__cell reveal reveal-delay-2">
-        <img src="assets/img/book2-mockup.jpg" alt="Boxed presentation">
-        <div class="craft__caption">
-          <span class="gold">vii · The packaging</span>
-          <h4>Twine-tied outer box</h4>
-          <p>An outer carton finished in raw kraft, tied in natural twine.</p>
-        </div>
-      </div>
-      <div class="craft__cell reveal reveal-delay-3" style="background: linear-gradient(135deg, #1a1610, #050402); display:flex; flex-direction:column; justify-content:flex-end; padding: 28px;">
-        <div class="craft__caption" style="position: static;">
-          <span class="gold">Total inside</span>
-          <h4 style="font-size: 44px; font-family: var(--serif); font-weight: 300; line-height:1; margin:6px 0;">8 objects.<br/><em style="font-style:italic; color: var(--gold-bright); font-size: 28px;">One quiet evening.</em></h4>
-          <p style="margin-top: 10px;">An object made to be unwrapped slowly.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ THREE BOOK BRIEFS ============ -->
-<section class="section" data-screen-label="The Three Books" style="background: linear-gradient(180deg, #0b0907, #050402);">
-  <div class="wrap">
-    <div class="section-head--center reveal">
-      <span class="rule rule--center">The Three Books <span class="ornament"></span> One Voice</span>
-      <h2 class="section-head__title" style="margin-top:18px;">A trilogy<br>of <em>inward weather.</em></h2>
-    </div>
-
-    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 3vw, 40px); margin-top: clamp(40px, 5vw, 64px);">
-
-      <article class="reveal" style="padding: 32px; border: 1px solid var(--ink-line); display:flex; flex-direction:column; gap: 18px;">
-        <div style="aspect-ratio: 3/4; overflow:hidden;">
-          <img src="assets/img/book1-mockup.jpg" alt="" style="width:100%; height:100%; object-fit:cover;">
-        </div>
-        <span class="eyebrow">Book One · I</span>
-        <h3 class="book__title-deva" style="font-size: clamp(28px, 2.6vw, 40px); margin:0;">पहली बारिश</h3>
-        <p style="margin:0; font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--ivory);">Pehli Baarish · First Rain</p>
-        <p class="body" style="margin:0; font-size: 14.5px;">First rain, identity, the wide-open vowel of love. 54 poems for the moment a young heart learns its own name.</p>
-        <a href="book-one.html" class="link-arrow" style="margin-top:auto;">Buy individually →</a>
-      </article>
-
-      <article class="reveal reveal-delay-1" style="padding: 32px; border: 1px solid var(--ink-line); display:flex; flex-direction:column; gap: 18px;">
-        <div style="aspect-ratio: 3/4; overflow:hidden;">
-          <img src="assets/img/book2-mockup.jpg" alt="" style="width:100%; height:100%; object-fit:cover;">
-        </div>
-        <span class="eyebrow">Book Two · II</span>
-        <h3 class="book__title-deva" style="font-size: clamp(28px, 2.6vw, 40px); margin:0;">मानसी</h3>
-        <p style="margin:0; font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--ivory);">Manasi · Portrait of the Beloved</p>
-        <p class="body" style="margin:0; font-size: 14.5px;">A book of devotional verse. 48 poems for the imagined and the unforgotten — written in the long evening hour of love.</p>
-        <span class="small" style="margin-top:auto; color: var(--gold); display:inline-flex; align-items:center; gap:8px;">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-          Collector edition only
-        </span>
-      </article>
-
-      <article class="reveal reveal-delay-2" style="padding: 32px; border: 1px solid var(--ink-line); display:flex; flex-direction:column; gap: 18px;">
-        <div style="aspect-ratio: 3/4; overflow:hidden;">
-          <img src="assets/img/book3-mockup.jpg" alt="" style="width:100%; height:100%; object-fit:cover;">
-        </div>
-        <span class="eyebrow">Book Three · III</span>
-        <h3 class="book__title-deva" style="font-size: clamp(28px, 2.6vw, 40px); margin:0;">नारी की आवाज़</h3>
-        <p style="margin:0; font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--ivory);">Naari Ki Aawaaz · A Woman's Voice</p>
-        <p class="body" style="margin:0; font-size: 14.5px;">The closing movement. 62 poems on womanhood, dignity, freedom — written in the voice of women remembered and imagined.</p>
-        <span class="small" style="margin-top:auto; color: var(--gold); display:inline-flex; align-items:center; gap:8px;">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-          Collector edition only
-        </span>
-      </article>
     </div>
   </div>
 </section>
@@ -341,72 +272,47 @@
   <div class="wrap">
     <div class="section-head reveal">
       <div>
-        <span class="rule">The Specifics <span class="ornament"></span> Honest Detail</span>
+        <span class="rule">The specifics <span class="ornament"></span> Honest detail</span>
         <h2 class="section-head__title">Built to a <em>standard,</em><br>not a deadline.</h2>
       </div>
       <p class="section-head__body">The kind of detail that does not show in photographs but reveals itself, slowly, in the hand.</p>
     </div>
 
     <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 0; border-top: 1px solid var(--ink-line);">
-      <div class="spec-row"><span>Format</span><span>Hardcover, sewn binding</span></div>
-      <div class="spec-row"><span>Books</span><span>Three (Pehli Baarish, Manasi, Naari Ki Aawaaz)</span></div>
-      <div class="spec-row"><span>Pages</span><span>164 poems · approx. 320 pages each</span></div>
-      <div class="spec-row"><span>Trim Size</span><span>5.25 × 7.5 in · 134 × 191 mm</span></div>
-      <div class="spec-row"><span>Cover</span><span>Cloth-wrapped board, gold foil stamping</span></div>
-      <div class="spec-row"><span>Paper</span><span>Cream natural, 90 gsm acid-free</span></div>
-      <div class="spec-row"><span>Slipcase</span><span>Ivory cloth-bound, foil pressed</span></div>
-      <div class="spec-row"><span>Languages</span><span>Hindi (Devanagari) with English titles</span></div>
-      <div class="spec-row"><span>Edition</span><span>Pressing No. 01 · Limited to 500 sets</span></div>
-      <div class="spec-row"><span>Signed</span><span>Hand-signed author's note, every set</span></div>
-      <div class="spec-row"><span>Weight</span><span>Approx. 2.4 kg, boxed</span></div>
+      <div class="spec-row"><span>The work</span><span>आत्म-मिलन – आत्म-विरह · ten books</span></div>
+      <div class="spec-row"><span>Format</span><span>Hardcover, sewn binding, clothbound</span></div>
+      <div class="spec-row"><span>Composed</span><span>2013 – 2017 · Yatendra Chandra</span></div>
+      <div class="spec-row"><span>Cover</span><span>Cloth-wrapped board, antique gold foil</span></div>
+      <div class="spec-row"><span>Paper</span><span>Cream natural, acid-free, made not to yellow</span></div>
+      <div class="spec-row"><span>Slipcase</span><span>Foil-pressed cloth board</span></div>
+      <div class="spec-row"><span>Language</span><span>Hindi (Devanagari) with English titles</span></div>
+      <div class="spec-row"><span>Edition</span><span>Limited to 2,000 hand-numbered sets</span></div>
+      <div class="spec-row"><span>Signed</span><span>Author's signature &amp; note (Signature edition)</span></div>
+      <div class="spec-row"><span>Delivery</span><span>White-glove, worldwide, included</span></div>
+      <div class="spec-row"><span>Reprint</span><span>None — the book is closed when complete</span></div>
       <div class="spec-row"><span>Pressed</span><span>By hand · Solitude Ink · Bombay</span></div>
     </div>
   </div>
 </section>
 
 <style>
-.finish-chip {
-  flex: 1;
-  display: grid; grid-template-columns: 32px 1fr; gap: 12px;
-  align-items: center;
-  padding: 14px 16px;
-  border: 1px solid var(--ink-line);
-  cursor: pointer;
-  transition: all .3s;
-  position: relative;
-}
-.finish-chip input { position: absolute; opacity: 0; pointer-events: none; }
-.finish-chip:hover { border-color: var(--gold-soft); }
-.finish-chip.is-selected, .finish-chip:has(input:checked) { border-color: var(--gold); background: rgba(201,169,106,0.05); }
-.finish-swatch { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(243,232,210,0.2); }
-.finish-label { font-family: var(--serif); font-size: 15px; line-height: 1.2; }
-.finish-label em { display:block; font-size:10px; letter-spacing:.22em; text-transform: uppercase; color: rgba(243,232,210,0.5); margin-top: 2px; font-style: normal; }
-.spec-row {
-  display: grid; grid-template-columns: 1fr 1.4fr;
-  gap: 24px; padding: 22px 0;
-  border-bottom: 1px solid var(--ink-line);
-}
+.spec-row { display: grid; grid-template-columns: 1fr 1.4fr; gap: 24px; padding: 22px 0; border-bottom: 1px solid var(--ink-line); }
 .spec-row span:first-child { font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: rgba(243,232,210,0.5); }
 .spec-row span:last-child { font-family: var(--serif); font-size: 17px; color: var(--ivory); font-style: italic; font-weight: 400; }
-@media (max-width: 880px) {
-  .finish-chip { grid-template-columns: 26px 1fr; padding: 12px; }
-  .finish-swatch { width: 26px; height: 26px; }
-  .finish-label { font-size: 13px; }
-}
 </style>
 
 <!-- ============ FINAL CTA ============ -->
 <section class="final" data-screen-label="Final CTA">
   <div class="final__particles" data-particles="18"></div>
-  <span class="rule rule--center" style="display:flex; justify-content:center;">Pressed in a small number</span>
+  <span class="rule rule--center" style="display:flex; justify-content:center;">Pressed once</span>
   <h2 class="final__title">Held by the kind of reader<br><em>who keeps the lights low.</em></h2>
-  <p class="final__sub">Pressing No. 01 will not be reprinted. The next pressing will carry a different finish, a different colour, a different number.</p>
+  <p class="final__sub">The edition will not be reprinted. When the 2,000th number is claimed, the press closes the book — and the price you see today is the lowest it will ever be.</p>
   <div class="final__ctas">
-    <button class="btn btn--gold btn--lg" data-add="collector">
-      Add Collector Edition — ₹4,800
+    <button class="btn btn--gold btn--lg" data-add="signature">
+      Reserve a Numbered Set — <span data-ed-signature>$600</span>
       <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
     </button>
-    <a href="book-one.html" class="btn btn--ghost btn--lg">Begin with Book One instead</a>
+    <button class="btn btn--ghost btn--lg" data-add="hardcover">Or the Hardcover — <span data-ed-hardcover>$300</span></button>
   </div>
 </section>
 
@@ -420,40 +326,39 @@
         <ellipse cx="13" cy="24" rx="6" ry="2" stroke="currentColor" stroke-width="1" fill="none"/>
         <path d="M13 26L13 30L11.5 30" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
       </svg>
-      <h3>Solitude Ink</h3>
-      <p>Books for the inward journey. An independent poetry press, pressing in small numbers, for readers who feel deeply.</p>
-      <span class="small">© 2026 Solitude Ink Publishing House · Bombay</span>
+      <h3>आत्म-मिलन – आत्म-विरह</h3>
+      <p>A finite literary universe. Pressed once, in small numbers, for readers who keep what they love.</p>
+      <span class="small">© 2026 Solitude Ink · Limited to 2,000 numbered sets.</span>
     </div>
     <div class="footer__col">
-      <h5>The Press</h5>
+      <h5>The Edition</h5>
       <ul>
-        <li><a href="collector.html">Collector Edition</a></li>
-        <li><a href="book-one.html">Book One — Pehli Baarish</a></li>
-        <li><a href="index.html#author">The Author</a></li>
-        <li><a href="index.html#immersive">Read a Poem</a></li>
+        <li><a href="collector.html">The Hardcover Universe</a></li>
+        <li><a href="collector.html">The Signature Numbered Universe</a></li>
+        <li><a href="index.html#price">The Price Ladder</a></li>
+        <li><a href="index.html#authenticity">Authenticity &amp; Numbering</a></li>
       </ul>
     </div>
     <div class="footer__col">
-      <h5>Care</h5>
+      <h5>To Keep</h5>
       <ul>
-        <li><a href="#">Shipping & Delivery</a></li>
-        <li><a href="#">Returns & Exchanges</a></li>
-        <li><a href="#">Book Care Guide</a></li>
-        <li><a href="#">Wholesale Enquiries</a></li>
+        <li><a href="#">Worldwide white-glove delivery</a></li>
+        <li><a href="#">Gifting &amp; inscription</a></li>
+        <li><a href="#">Book care</a></li>
+        <li><a href="#">The closing date</a></li>
       </ul>
     </div>
     <div class="footer__col">
-      <h5>Reach Us</h5>
+      <h5>Reach</h5>
       <ul>
         <li><a href="mailto:hello@solitudeink.in">hello@solitudeink.in</a></li>
         <li><a href="#">Instagram</a></li>
         <li><a href="#">Substack — Letters</a></li>
-        <li><a href="#">Press & Reviews</a></li>
       </ul>
     </div>
   </div>
   <div class="footer__bottom">
-    <span>Solitude Ink · Books for the Inward Journey</span>
+    <span>Solitude Ink · आत्म-मिलन – आत्म-विरह · Pressed once</span>
     <div class="footer__bottom-links">
       <a href="#">Privacy</a>
       <a href="#">Terms</a>
@@ -465,11 +370,11 @@
 <!-- ============ STICKY BUY BAR ============ -->
 <div class="sticky-buy" data-sticky-buy data-sticky-trigger="#detail">
   <div>
-    <span class="sticky-buy__title">The First Movement <em>Collector Edition</em></span>
-    <span class="sticky-buy__price">₹4,800</span>
+    <span class="sticky-buy__title">आत्म-मिलन – आत्म-विरह <em id="sticky-edition">Hardcover Universe</em></span>
+    <span class="sticky-buy__price" id="sticky-price" data-ed-hardcover>$300</span>
   </div>
   <div class="sticky-buy__cta">
-    <button class="btn btn--gold" data-add="collector">Add to List
+    <button class="btn btn--gold" id="sticky-btn" data-add="hardcover">Reserve
       <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
     </button>
   </div>
@@ -477,9 +382,9 @@
 
 <!-- ============ CART DRAWER ============ -->
 <div class="cart-overlay" data-cart-overlay></div>
-<aside class="cart" data-cart aria-label="Reading list">
+<aside class="cart" data-cart aria-label="Your reservations">
   <div class="cart__head">
-    <h3>Your Reading List <em>· a quiet basket</em></h3>
+    <h3>Your Reservations <em>· numbers held</em></h3>
     <button class="cart__close" data-cart-close aria-label="Close">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
@@ -487,13 +392,13 @@
   <div class="cart__body" data-cart-body></div>
   <div class="cart__foot">
     <div class="cart__row"><span>Subtotal</span><span data-cart-subtotal>—</span></div>
-    <div class="cart__row"><span>Shipping</span><span data-cart-ship>—</span></div>
+    <div class="cart__row"><span>White-glove delivery</span><span data-cart-ship>—</span></div>
     <div class="cart__row total"><span>Total</span><span data-cart-total>—</span></div>
     <a href="checkout.html" class="btn btn--gold btn--lg" data-cart-checkout style="width:100%; margin-top:16px;">
-      Proceed to Checkout
+      Reserve &amp; Check Out
       <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
     </a>
-    <p class="small" style="text-align:center; margin: 14px 0 0; line-height:1.6;">Complimentary shipping on orders above ₹3,000.<br/>Pre-orders ship from Monsoon 2026.</p>
+    <p class="small" style="text-align:center; margin: 14px 0 0; line-height:1.6;">Reserving locks today's price. Worldwide white-glove delivery, included.</p>
   </div>
 </aside>
 
@@ -503,18 +408,47 @@
   document.getElementById('gallery-thumbs').addEventListener('click', (e) => {
     const btn = e.target.closest('[data-gal]');
     if (!btn) return;
-    document.querySelectorAll('#gallery-thumbs button').forEach(b => b.style.borderColor = '');
-    btn.style.borderColor = 'var(--gold)';
+    document.querySelectorAll('#gallery-thumbs button').forEach(b => b.style.border = '');
     btn.style.border = '1px solid var(--gold)';
     document.querySelector('#gallery-main img').src = btn.dataset.gal;
   });
-  // Finish chip selection
-  document.querySelectorAll('.finish-chip').forEach(chip => {
-    chip.addEventListener('click', () => {
-      document.querySelectorAll('.finish-chip').forEach(c => c.classList.remove('is-selected'));
-      chip.classList.add('is-selected');
-      const r = chip.querySelector('input'); if (r) r.checked = true;
-    });
+
+  // Edition selection wires the reserve button + sticky bar + qty target
+  const reserveBtn = document.getElementById('reserve-btn');
+  const reservePrice = document.getElementById('reserve-price');
+  const stickyBtn = document.getElementById('sticky-btn');
+  const stickyPrice = document.getElementById('sticky-price');
+  const stickyEdition = document.getElementById('sticky-edition');
+  const qtyWrap = document.querySelector('.qty');
+
+  function selectEdition(val){
+    const s = window.EditionState();
+    const price = val === 'signature' ? s.signature : s.hardcover;
+    const label = val === 'signature' ? 'Signature Numbered' : 'Hardcover Universe';
+    reserveBtn.dataset.add = val;
+    reservePrice.textContent = window.usd(price);
+    reservePrice.removeAttribute('data-ed-hardcover');
+    reservePrice.removeAttribute('data-ed-signature');
+    stickyBtn.dataset.add = val;
+    stickyPrice.textContent = window.usd(price);
+    stickyPrice.removeAttribute('data-ed-hardcover');
+    stickyEdition.textContent = label;
+    // qty picker should target the chosen edition
+    qtyWrap.querySelector('[data-qty-minus]').dataset.qtyMinus = val;
+    qtyWrap.querySelector('[data-qty-plus]').dataset.qtyPlus = val;
+    qtyWrap.querySelector('[data-qty-for]').dataset.qtyFor = val;
+  }
+  document.getElementById('edition-choice').addEventListener('change', (e) => {
+    if (e.target.name === 'edition') selectEdition(e.target.value);
+  });
+
+  // Reserve & checkout
+  document.getElementById('reserve-checkout').addEventListener('click', (e) => {
+    e.preventDefault();
+    const val = document.querySelector('input[name="edition"]:checked').value;
+    const qty = parseInt(document.querySelector('[data-qty-for]').textContent, 10) || 1;
+    window.SolitudeCart.add(val, qty);
+    setTimeout(() => location.href = 'checkout.html', 140);
   });
 </script>
 </body>

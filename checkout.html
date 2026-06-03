@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Checkout — Solitude Ink</title>
+<title>Reserve &amp; Check Out — Solitude Ink</title>
 <link rel="stylesheet" href="assets/css/solitude.css">
 </head>
 <body>
@@ -19,37 +19,40 @@
     </svg>
     <span>Solitude Ink</span>
   </a>
-  <div style="text-align: center; font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: rgba(243,232,210,0.55);">Secure Checkout</div>
+  <div style="text-align: center; font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: rgba(243,232,210,0.55);" class="topbar__hide-sm">Reserve your number</div>
   <div class="nav__right">
-    <a href="index.html" style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:rgba(243,232,210,0.6);">← Back to home</a>
+    <a href="index.html" style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:rgba(243,232,210,0.6);" class="topbar__hide-sm">← Back to home</a>
+    <button class="nav__burger" data-burger aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
+
+<!-- Mobile menu -->
+<div class="nav__mobile-menu" data-mobile-menu>
+  <button class="nav__mobile-close" data-burger-close aria-label="Close menu">×</button>
+  <a href="index.html" data-mobile-link>← Back to home</a>
+  <div class="menu-divider"></div>
+  <a href="index.html#price" data-mobile-link>The Price Ladder</a>
+  <div class="menu-divider"></div>
+  <a href="index.html#editions" data-mobile-link>The Editions</a>
+  <div class="menu-divider"></div>
+  <a href="collector.html" data-mobile-link>Reserve</a>
+</div>
 
 <!-- ============ CHECKOUT ============ -->
 <section class="checkout" data-screen-label="Checkout">
   <div class="wrap">
-
     <div class="checkout__grid">
-
-      <!-- ===== MAIN ===== -->
       <div class="checkout__main">
 
         <!-- Steps -->
         <div class="steps" id="steps">
-          <div class="step is-active" data-step="1">
-            <span class="step__num">1</span>
-            <span>Delivery</span>
-          </div>
+          <div class="step is-active" data-step="1"><span class="step__num">1</span><span>Delivery</span></div>
           <span class="step__sep"></span>
-          <div class="step" data-step="2">
-            <span class="step__num">2</span>
-            <span>Payment</span>
-          </div>
+          <div class="step" data-step="2"><span class="step__num">2</span><span>Payment</span></div>
           <span class="step__sep"></span>
-          <div class="step" data-step="3">
-            <span class="step__num">3</span>
-            <span>Confirmation</span>
-          </div>
+          <div class="step" data-step="3"><span class="step__num">3</span><span>Confirmation</span></div>
         </div>
 
         <!-- ===== STEP 1: Delivery ===== -->
@@ -58,109 +61,60 @@
           <h2 style="font-family: var(--serif); font-size: clamp(36px, 4vw, 56px); font-weight: 300; line-height: 1.05; margin: 18px 0 36px;">Tell us <em style="font-style:italic; color: var(--gold-bright);">where to send it.</em></h2>
 
           <form id="form-delivery" onsubmit="event.preventDefault(); goStep(2);">
-
             <div class="field-row">
-              <div class="field">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" required placeholder="Anaisha" value="">
-              </div>
-              <div class="field">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" required placeholder="Roy">
-              </div>
+              <div class="field"><label for="fname">First Name</label><input type="text" id="fname" required placeholder="Anaisha"></div>
+              <div class="field"><label for="lname">Last Name</label><input type="text" id="lname" required placeholder="Roy"></div>
             </div>
-
-            <div class="field">
-              <label for="email">Email</label>
-              <input type="email" id="email" required placeholder="you@quiet.in">
-            </div>
-
-            <div class="field">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" required placeholder="+91 ··· ··· ····">
-            </div>
-
-            <div class="field">
-              <label for="addr1">Address Line</label>
-              <input type="text" id="addr1" required placeholder="House number, street">
-            </div>
-
-            <div class="field">
-              <label for="addr2">Apartment, building (optional)</label>
-              <input type="text" id="addr2" placeholder="Flat 04, Curzon Apartments">
-            </div>
-
+            <div class="field"><label for="email">Email</label><input type="email" id="email" required placeholder="you@quiet.world"></div>
+            <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" required placeholder="+1 ··· ··· ····"></div>
+            <div class="field"><label for="addr1">Address Line</label><input type="text" id="addr1" required placeholder="House number, street"></div>
+            <div class="field"><label for="addr2">Apartment, building (optional)</label><input type="text" id="addr2" placeholder="Apt 4"></div>
             <div class="field-row-3">
-              <div class="field">
-                <label for="city">City</label>
-                <input type="text" id="city" required placeholder="Bombay">
-              </div>
-              <div class="field">
-                <label for="state">State</label>
-                <input type="text" id="state" required placeholder="Maharashtra">
-              </div>
-              <div class="field">
-                <label for="pin">PIN Code</label>
-                <input type="text" id="pin" required placeholder="400 001">
-              </div>
+              <div class="field"><label for="city">City</label><input type="text" id="city" required placeholder="City"></div>
+              <div class="field"><label for="state">State / Region</label><input type="text" id="state" required placeholder="Region"></div>
+              <div class="field"><label for="pin">Postal Code</label><input type="text" id="pin" required placeholder="00000"></div>
             </div>
-
             <div class="field">
               <label for="country">Country</label>
               <select id="country">
+                <option>United States</option>
+                <option>United Kingdom</option>
+                <option>Canada</option>
+                <option>Australia</option>
                 <option>India</option>
-                <option>United Kingdom · +₹1,400</option>
-                <option>United States · +₹1,800</option>
-                <option>Singapore · +₹1,200</option>
-                <option>UAE · +₹1,100</option>
+                <option>Singapore</option>
+                <option>United Arab Emirates</option>
+                <option>Elsewhere</option>
               </select>
             </div>
 
-            <!-- Shipping method -->
+            <!-- Presentation -->
             <div style="margin-top: 36px;">
-              <h4 style="font-family: var(--sans); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: rgba(243,232,210,0.55); margin: 0 0 16px; font-weight: 500;">Shipping</h4>
+              <h4 style="font-family: var(--sans); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: rgba(243,232,210,0.55); margin: 0 0 16px; font-weight: 500;">Delivery &amp; presentation</h4>
               <div class="radio-group">
                 <label class="radio-card">
                   <input type="radio" name="ship" value="standard" checked>
                   <span class="dot"></span>
-                  <div>
-                    <div class="label-main">Standard · Boxed, hand-wrapped</div>
-                    <div class="label-sub">4–7 business days after pressing</div>
-                  </div>
-                  <span class="label-price">Complimentary</span>
-                </label>
-                <label class="radio-card">
-                  <input type="radio" name="ship" value="express">
-                  <span class="dot"></span>
-                  <div>
-                    <div class="label-main">Express · Priority dispatch</div>
-                    <div class="label-sub">2–3 business days · India only</div>
-                  </div>
-                  <span class="label-price">₹450</span>
+                  <div><div class="label-main">White-glove · hand-wrapped</div><div class="label-sub">Tracked, insured, presented for keeping</div></div>
+                  <span class="label-price">Included</span>
                 </label>
                 <label class="radio-card">
                   <input type="radio" name="ship" value="gift">
                   <span class="dot"></span>
-                  <div>
-                    <div class="label-main">Gift · Hand-written note</div>
-                    <div class="label-sub">Standard delivery, wax-sealed gift envelope</div>
-                  </div>
-                  <span class="label-price">+ ₹240</span>
+                  <div><div class="label-main">Gift presentation · with inscription</div><div class="label-sub">A hand-written inscription, sealed and presented for giving</div></div>
+                  <span class="label-price">Included</span>
                 </label>
               </div>
             </div>
 
-            <!-- Note -->
             <div class="field" style="margin-top: 24px;">
-              <label for="note">A note for the press (optional)</label>
-              <textarea id="note" rows="2" placeholder="Anything you'd like to say to Yatendra, or a dedication for the gift card."></textarea>
+              <label for="note">A note for the press, or an inscription (optional)</label>
+              <textarea id="note" rows="2" placeholder="A dedication for the gift, or a few words to Yatendra."></textarea>
             </div>
 
-            <!-- Step controls -->
             <div style="display:flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--ink-line); gap: 16px; flex-wrap: wrap;">
-              <a href="index.html" class="link-arrow" style="border:0; padding:0; color: rgba(243,232,210,0.5);">← Return to bookshop</a>
-              <button type="submit" class="btn btn--gold btn--lg">
-                Continue to Payment
+              <a href="index.html" class="link-arrow" style="border:0; padding:0; color: rgba(243,232,210,0.5);">← Return to the universe</a>
+              <button type="submit" class="btn btn--gold btn--lg">Continue to Payment
                 <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
               </button>
             </div>
@@ -173,75 +127,49 @@
           <h2 style="font-family: var(--serif); font-size: clamp(36px, 4vw, 56px); font-weight: 300; line-height: 1.05; margin: 18px 0 36px;">A small <em style="font-style:italic; color: var(--gold-bright);">exchange.</em></h2>
 
           <form id="form-payment" onsubmit="event.preventDefault(); goStep(3);">
-
             <div style="margin-bottom: 32px;">
               <h4 style="font-family: var(--sans); font-size: 11px; letter-spacing: .3em; text-transform: uppercase; color: rgba(243,232,210,0.55); margin: 0 0 16px; font-weight: 500;">Method</h4>
               <div class="radio-group">
                 <label class="radio-card">
                   <input type="radio" name="pay" value="card" checked>
                   <span class="dot"></span>
-                  <div>
-                    <div class="label-main">Card · Visa, Mastercard, Amex, Rupay</div>
-                    <div class="label-sub">Secured by Razorpay · 256-bit TLS</div>
-                  </div>
+                  <div><div class="label-main">Card · Visa, Mastercard, Amex</div><div class="label-sub">Secured · 256-bit TLS</div></div>
                   <span style="display:flex; gap: 6px;">
                     <span style="font-size:10px; padding: 4px 8px; border:1px solid var(--ink-line); color: rgba(243,232,210,0.6); font-family: var(--serif); font-style: italic;">Visa</span>
                     <span style="font-size:10px; padding: 4px 8px; border:1px solid var(--ink-line); color: rgba(243,232,210,0.6); font-family: var(--serif); font-style: italic;">MC</span>
                   </span>
                 </label>
                 <label class="radio-card">
-                  <input type="radio" name="pay" value="upi">
+                  <input type="radio" name="pay" value="paypal">
                   <span class="dot"></span>
-                  <div>
-                    <div class="label-main">UPI · PhonePe, GPay, Paytm</div>
-                    <div class="label-sub">Instant · India only</div>
-                  </div>
-                  <span style="font-size:10px; padding: 4px 10px; border:1px solid var(--gold-soft); color: var(--gold); font-family: var(--sans); letter-spacing:.2em; text-transform: uppercase;">Recommended</span>
+                  <div><div class="label-main">PayPal</div><div class="label-sub">Pay in your own currency</div></div>
+                  <span style="font-size:10px; padding: 4px 10px; border:1px solid var(--gold-soft); color: var(--gold); font-family: var(--sans); letter-spacing:.2em; text-transform: uppercase;">Worldwide</span>
                 </label>
                 <label class="radio-card">
-                  <input type="radio" name="pay" value="netbank">
+                  <input type="radio" name="pay" value="bank">
                   <span class="dot"></span>
-                  <div>
-                    <div class="label-main">Net Banking</div>
-                    <div class="label-sub">All major banks</div>
-                  </div>
+                  <div><div class="label-main">Bank transfer</div><div class="label-sub">For collectors who prefer it</div></div>
                   <span></span>
                 </label>
               </div>
             </div>
 
-            <!-- Card fields (shown when card selected) -->
             <div id="card-fields">
-              <div class="field">
-                <label for="card-name">Cardholder Name</label>
-                <input type="text" id="card-name" placeholder="As it appears on the card">
-              </div>
-              <div class="field">
-                <label for="card-no">Card Number</label>
-                <input type="text" id="card-no" placeholder="4242 4242 4242 4242" maxlength="19">
-              </div>
+              <div class="field"><label for="card-name">Cardholder Name</label><input type="text" id="card-name" placeholder="As it appears on the card"></div>
+              <div class="field"><label for="card-no">Card Number</label><input type="text" id="card-no" placeholder="4242 4242 4242 4242" maxlength="19"></div>
               <div class="field-row">
-                <div class="field">
-                  <label for="card-exp">Expiry</label>
-                  <input type="text" id="card-exp" placeholder="MM / YY" maxlength="7">
-                </div>
-                <div class="field">
-                  <label for="card-cvc">CVC</label>
-                  <input type="text" id="card-cvc" placeholder="•••" maxlength="4">
-                </div>
+                <div class="field"><label for="card-exp">Expiry</label><input type="text" id="card-exp" placeholder="MM / YY" maxlength="7"></div>
+                <div class="field"><label for="card-cvc">CVC</label><input type="text" id="card-cvc" placeholder="•••" maxlength="4"></div>
               </div>
-
               <label style="display:flex; gap: 12px; align-items: center; margin-top: 16px; cursor:pointer;">
                 <input type="checkbox" style="width:18px; height:18px; accent-color: var(--gold);">
-                <span style="font-size: 13px; color: rgba(243,232,210,0.7);">Save this card for future Solitude Ink pressings.</span>
+                <span style="font-size: 13px; color: rgba(243,232,210,0.7);">Notify me when future Solitude Ink editions open.</span>
               </label>
             </div>
 
-            <!-- Step controls -->
             <div style="display:flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid var(--ink-line); gap: 16px; flex-wrap: wrap;">
               <button type="button" class="link-arrow" style="border:0; padding:0; color: rgba(243,232,210,0.5); background:none;" onclick="goStep(1)">← Back to delivery</button>
-              <button type="submit" class="btn btn--gold btn--lg">
-                Place Pre-order
+              <button type="submit" class="btn btn--gold btn--lg">Confirm Reservation
                 <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
               </button>
             </div>
@@ -254,51 +182,43 @@
             <div class="complete__seal">
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6L9 17l-5-5"/></svg>
             </div>
-            <span class="rule rule--center" style="display:inline-flex; margin: 0 auto;">A small confirmation</span>
-            <h2 style="margin-top: 20px;">Thank you for <em>reading slowly.</em></h2>
-            <p>Your pre-order has been received. A confirmation has been sent to <strong id="confirm-email" style="font-family: var(--serif); font-style: italic; color: var(--gold);">your inbox</strong>.</p>
-            <p>The First Pressing ships from <em style="color: var(--gold-bright);">Monsoon 2026</em>. Until then, the books rest, and so do you.</p>
+            <span class="rule rule--center" style="display:inline-flex; margin: 0 auto;">Your number is held</span>
+            <h2 style="margin-top: 20px;">Thank you for <em>arriving early.</em></h2>
+            <p>Your reservation has been received and your number is now yours. A confirmation has been sent to <strong id="confirm-email" style="font-family: var(--serif); font-style: italic; color: var(--gold);">your inbox</strong>.</p>
+            <p>The edition ships from <em style="color: var(--gold-bright);">Monsoon 2026</em>, white-glove, presented for keeping. Until then, the books rest, and so do you.</p>
 
-            <p class="complete__order">Order No. <span id="confirm-order" style="color: var(--ivory);">SI · 2026 · 0247</span></p>
+            <p class="complete__order">Reserved <span id="confirm-no" style="color: var(--ivory);">No. 0341</span> · Order <span id="confirm-order" style="color: var(--ivory);">SI-2026-0247</span></p>
 
             <div style="display:flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 36px;">
-              <a href="index.html" class="btn btn--gold">Return to the bookshop</a>
-              <a href="index.html#immersive" class="btn btn--ghost">Read a poem while you wait</a>
+              <a href="index.html" class="btn btn--gold">Return to the universe</a>
+              <a href="index.html#read" class="btn btn--ghost">Read a poem while you wait</a>
             </div>
 
             <p style="margin-top: 56px; font-family: var(--hand); font-size: 36px; line-height: 1; color: var(--gold-bright);">— Yatendra</p>
-            <p class="small" style="margin: 8px auto 0;">A handwritten note will accompany every set.</p>
+            <p class="small" style="margin: 8px auto 0;">A hand-written note accompanies every Signature set.</p>
           </div>
         </div>
       </div>
 
-      <!-- ===== ORDER SUMMARY (side) ===== -->
+      <!-- ===== ORDER SUMMARY ===== -->
       <aside class="checkout__side">
-        <h3 style="font-family: var(--serif); font-size: 22px; font-weight: 400; margin: 0 0 4px;">Order Summary</h3>
-        <span class="small" style="display:block; margin-bottom: 22px;">Your reading list</span>
+        <h3 style="font-family: var(--serif); font-size: 22px; font-weight: 400; margin: 0 0 4px;">Your Reservation</h3>
+        <span class="small" style="display:block; margin-bottom: 22px;">Numbers held at today's price</span>
 
         <div id="summary-items"></div>
 
         <div class="summary-totals">
           <div class="cart__row"><span>Subtotal</span><span id="sum-sub">—</span></div>
-          <div class="cart__row"><span>Shipping</span><span id="sum-ship">Complimentary</span></div>
-          <div class="cart__row"><span>Pre-order discount</span><span style="color: var(--gold);" id="sum-disc">— ₹800</span></div>
+          <div class="cart__row"><span>White-glove delivery</span><span style="color: var(--gold);">Included</span></div>
           <div class="cart__row total"><span>Total</span><span id="sum-total">—</span></div>
         </div>
 
         <div style="margin-top: 22px; padding: 18px; border: 1px solid var(--gold-soft); background: rgba(201,169,106,0.04);">
-          <p style="margin: 0; font-family: var(--serif); font-style: italic; font-size: 14.5px; color: var(--gold-bright); line-height: 1.5;">"Crafted slowly, in a small number, for readers who keep the lights low."</p>
-          <p class="small" style="margin: 10px 0 0;">— Solitude Ink, Pressing No. 01</p>
+          <p style="margin: 0; font-family: var(--serif); font-style: italic; font-size: 14.5px; color: var(--gold-bright); line-height: 1.5;">"Pressed once. When the last set is sold, the universe closes."</p>
+          <p class="small" style="margin: 10px 0 0;">— Solitude Ink · आत्म-मिलन – आत्म-विरह</p>
         </div>
 
-        <!-- Promo -->
-        <details style="margin-top: 22px; border-top: 1px solid var(--ink-line); padding-top: 18px;">
-          <summary style="cursor: pointer; font-size: 11px; letter-spacing: .26em; text-transform: uppercase; color: rgba(243,232,210,0.55); list-style: none;">+ Apply a promotion code</summary>
-          <div style="display:flex; gap: 8px; margin-top: 14px;">
-            <input type="text" placeholder="MONSOON26" style="flex:1; padding: 12px 14px; background: transparent; border: 1px solid var(--ink-line); color: var(--ivory); font-family: var(--serif); font-size: 16px; letter-spacing: .04em;">
-            <button class="btn btn--ghost btn--sm">Apply</button>
-          </div>
-        </details>
+        <p class="small" style="margin-top: 20px; line-height: 1.7;">Reserving locks today's price. The edition is limited to 2,000 hand-numbered sets and will not be reprinted.</p>
       </aside>
     </div>
   </div>
@@ -307,13 +227,12 @@
 <!-- ============ FOOTER (minimal) ============ -->
 <footer style="padding: 40px var(--gutter); border-top: 1px solid var(--ink-line); background: #050402;">
   <div style="max-width: var(--max); margin: 0 auto; display:flex; justify-content:space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: rgba(243,232,210,0.4);">
-    <span>Solitude Ink · Books for the Inward Journey</span>
-    <div style="display:flex; gap: 28px;">
+    <span>Solitude Ink · आत्म-मिलन – आत्म-विरह</span>
+    <div style="display:flex; gap: 28px; align-items:center;">
       <span style="display:inline-flex; align-items:center; gap:8px;">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-        256-bit TLS · Razorpay
+        256-bit TLS · secured
       </span>
-      <a href="#">Help</a>
       <a href="mailto:hello@solitudeink.in">hello@solitudeink.in</a>
     </div>
   </div>
@@ -321,77 +240,59 @@
 
 <script src="assets/js/solitude.js"></script>
 <script>
-  // ----- Render summary from cart -----
-  function inrLocal(n) { return '₹' + n.toLocaleString('en-IN'); }
-
   function renderSummary() {
     const cart = window.SolitudeCart;
-    const items = cart.read();
+    let items = cart.read();
     const wrap = document.getElementById('summary-items');
 
-    // If empty, seed with collector edition so the demo always shows something
-    if (!items.length) {
-      cart.add('collector', 1);
-      return; // will recurse via cart:changed
-    }
+    if (!items.length) { cart.add('hardcover', 1); return; }
 
     wrap.innerHTML = items.map(it => {
       const p = cart.CATALOG[it.id];
+      const line = (it.price || p.price) * it.qty;
       return '<div class="summary-item">' +
         '<img src="' + p.img + '" alt="">' +
         '<div>' +
           '<div class="summary-item__title">' + p.title + '</div>' +
-          '<div class="summary-item__sub">' + p.kind + ' · Qty ' + it.qty + '</div>' +
+          '<div class="summary-item__sub">Reserved No. ' + window.num4(it.no || window.EditionState().reserveNo) + ' · Qty ' + it.qty + '</div>' +
         '</div>' +
-        '<div class="summary-item__price">' + inrLocal(p.price * it.qty) + '</div>' +
+        '<div class="summary-item__price">' + window.usd(line) + '</div>' +
       '</div>';
     }).join('');
 
-    let sub = cart.subtotal();
-    const ship = sub >= 3000 ? 0 : 180;
-    // Pre-order discount only if collector in cart
-    const hasCollector = items.some(i => i.id === 'collector');
-    const disc = hasCollector ? 800 * (items.find(i => i.id === 'collector').qty || 1) : 0;
+    const sub = cart.subtotal();
+    document.getElementById('sum-sub').textContent = window.usd(sub);
+    document.getElementById('sum-total').textContent = window.usd(sub);
 
-    document.getElementById('sum-sub').textContent = inrLocal(sub);
-    document.getElementById('sum-ship').textContent = ship === 0 ? 'Complimentary' : inrLocal(ship);
-    document.getElementById('sum-disc').textContent = disc > 0 ? ('— ' + inrLocal(disc)) : 'Not applied';
-    document.getElementById('sum-disc').style.color = disc > 0 ? 'var(--gold)' : 'rgba(243,232,210,0.5)';
-    document.getElementById('sum-total').textContent = inrLocal(sub + ship - disc);
+    // reserved number on confirmation
+    const first = items[0];
+    if (first) document.getElementById('confirm-no').textContent = 'No. ' + window.num4(first.no || window.EditionState().reserveNo);
   }
 
   document.addEventListener('cart:changed', renderSummary);
   renderSummary();
 
-  // ----- Steps -----
   window.goStep = function(n) {
     document.querySelectorAll('.step-panel').forEach(p => p.style.display = 'none');
     const target = document.querySelector('[data-panel="' + n + '"]');
     if (target) target.style.display = 'block';
-
     document.querySelectorAll('.step').forEach(s => {
       const num = parseInt(s.dataset.step, 10);
       s.classList.toggle('is-active', num === n);
       s.classList.toggle('is-done', num < n);
     });
-
-    // On confirmation: fill email + order
     if (n === 3) {
       const em = document.getElementById('email').value || 'your inbox';
       document.getElementById('confirm-email').textContent = em;
-      const order = 'SI · 2026 · ' + String(Math.floor(100 + Math.random() * 900)).padStart(4, '0');
-      document.getElementById('confirm-order').textContent = order;
+      document.getElementById('confirm-order').textContent = 'SI-2026-' + String(Math.floor(100 + Math.random() * 900)).padStart(4, '0');
     }
-
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Step click to navigate backwards
   document.querySelectorAll('.step').forEach(s => {
     s.style.cursor = 'pointer';
     s.addEventListener('click', () => {
       const n = parseInt(s.dataset.step, 10);
-      // Allow going back, or to a done step
       const active = document.querySelector('.step.is-active');
       const curr = active ? parseInt(active.dataset.step, 10) : 1;
       if (n < curr) goStep(n);

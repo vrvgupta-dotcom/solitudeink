@@ -3,16 +3,20 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Solitude Ink — Books for the Inward Journey</title>
-<meta name="description" content="An independent poetry publication house. The First Movement Collection — a cinematic collector edition of three books by Yatendra Chandra.">
+<title>आत्म-मिलन – आत्म-विरह · Aatm-Milan – Aatm-Virah — Solitude Ink</title>
+<meta name="description" content="A finite literary universe by Yatendra Chandra. Ten clothbound books, hand-numbered to 2,000 sets, pressed once and never again. The edition opens at $300 and rises as it sells.">
 <link rel="stylesheet" href="assets/css/solitude.css">
 </head>
 <body>
 
-<!-- ============ SCARCITY RIBBON ============ -->
-<div class="scarcity" data-screen-label="00 Ribbon">
-  <span class="scarcity__label">Pre-order open · First Pressing Limited to 500</span>
-  <div class="scarcity__timer" data-countdown></div>
+<!-- ============ 0 · PERSISTENT TOP BAR ============ -->
+<div class="topbar" data-screen-label="00 Top bar">
+  <span class="topbar__live"><span class="topbar__pulse"></span> Pre-launch</span>
+  <span class="topbar__dot topbar__hide-sm"></span>
+  <span class="topbar__hide-sm">The Edition opens at <strong data-ed-current>$300</strong> and rises as it sells</span>
+  <span class="topbar__dot"></span>
+  <span><strong data-ed-reserve-no>No. 0341</strong> of <span data-ed-total>2,000</span> · your number</span>
+  <a href="collector.html" class="topbar__cta">Reserve your number →</a>
 </div>
 
 <!-- ============ NAV ============ -->
@@ -27,50 +31,72 @@
     <span>Solitude Ink</span>
   </a>
   <div class="nav__links">
-    <a href="#collector">The Collection</a>
-    <a href="#books">The Books</a>
-    <a href="#immersive">Read</a>
+    <a href="#price">The Price</a>
+    <a href="#editions">The Editions</a>
+    <a href="#movements">The Ten</a>
+    <a href="#read">Read</a>
     <a href="#author">Author</a>
-    <a href="#reviews">Reviews</a>
   </div>
   <div class="nav__right">
-    <a href="collector.html" style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:rgba(243,232,210,0.7);">Shop</a>
-    <button class="nav__cart" data-cart-open aria-label="Open reading list">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 6h16l-1.5 12a2 2 0 0 1-2 1.8H7.5a2 2 0 0 1-2-1.8L4 6z"/><path d="M9 10V5a3 3 0 0 1 6 0v5"/></svg>
-      <span>List</span>
+    <a href="collector.html" style="font-size:11px; letter-spacing:.26em; text-transform:uppercase; color:rgba(243,232,210,0.7);">The Edition</a>
+    <button class="nav__cart" data-cart-open aria-label="Open reservations">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      <span>Reserved</span>
       <span class="nav__cart-count" data-cart-count style="display:none">0</span>
+    </button>
+    <button class="nav__burger" data-burger aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
-<!-- ============ HERO ============ -->
+<!-- Mobile menu -->
+<div class="nav__mobile-menu" data-mobile-menu>
+  <button class="nav__mobile-close" data-burger-close aria-label="Close menu">×</button>
+  <a href="#price" data-mobile-link>The Price</a>
+  <div class="menu-divider"></div>
+  <a href="#editions" data-mobile-link>The Editions</a>
+  <div class="menu-divider"></div>
+  <a href="#movements" data-mobile-link>The Ten</a>
+  <div class="menu-divider"></div>
+  <a href="#read" data-mobile-link>Read</a>
+  <div class="menu-divider"></div>
+  <a href="#author" data-mobile-link>Author</a>
+  <a href="collector.html" class="menu-reserve" data-mobile-link>Reserve your number</a>
+</div>
+
+<!-- ============ 1 · HERO ============ -->
 <section class="hero" id="top" data-screen-label="01 Hero">
-  <div class="hero__particles" data-particles="30"></div>
+  <div class="hero__particles" data-particles="32"></div>
 
   <div class="hero__copy">
-    <span class="hero__eyebrow rule">Solitude Ink <span class="ornament"></span> Pressing No. 01</span>
-    <h1 class="hero__title">
-      The First<br>
-      Movement<br>
-      <em>Collection</em>
-    </h1>
-    <p class="hero__sub">A collector edition crafted for readers who feel deeply.</p>
-    <p class="hero__body">Three books. One inward journey through rain, love, memory, longing, and the voice within. Hand-bound in cloth, foiled in antique gold, signed by the author.</p>
+    <span class="rule" style="margin-bottom:30px; display:inline-flex;">An Emotional Literary Universe</span>
+    <h1 class="hero__deva">आत्म-मिलन<br>– आत्म-<em>विरह</em></h1>
+    <p class="hero__english"><em>Self-Union and Self-Separation</em> — a complete poetic universe, pressed once, and never again.</p>
+
+    <div class="hero__tagline">
+      <span class="deva">प्रेम, स्मृति, विरह और आत्म-विलय की दस काव्य-यात्राएँ</span>
+      <span class="en">Ten poetic journeys through love, memory, separation, and the dissolving of the self.</span>
+    </div>
+
+    <p class="hero__body">Composed slowly between 2013 and 2017. Ten movements — from the first rain of awakening to the final melting at the end of love. Hand-bound, foil-stamped, numbered by hand — and offered, once, to two thousand readers who will keep it.</p>
+
     <div class="hero__ctas">
-      <a href="collector.html" class="btn btn--gold btn--lg">
-        Buy Collector Edition
+      <a href="#editions" class="btn btn--gold btn--lg">
+        Enter the Universe
         <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
       </a>
-      <a href="book-one.html" class="btn btn--ghost btn--lg">Explore Book One</a>
+      <a href="#read" class="btn btn--ghost btn--lg">Read a poem</a>
     </div>
+
     <div class="hero__meta">
       <div class="hero__meta-item">
-        <span class="hero__meta-k">Pressing</span>
-        <span class="hero__meta-v">No. 01 / 500</span>
+        <span class="hero__meta-k">The price</span>
+        <span class="hero__meta-v">$300 <span style="font-size:13px; color:rgba(243,232,210,0.4);">→ $580</span></span>
       </div>
       <div class="hero__meta-item">
-        <span class="hero__meta-k">Released</span>
-        <span class="hero__meta-v">Monsoon · 2026</span>
+        <span class="hero__meta-k">Numbered to</span>
+        <span class="hero__meta-v">2,000</span>
       </div>
       <div class="hero__meta-item">
         <span class="hero__meta-k">Author</span>
@@ -81,253 +107,366 @@
 
   <div class="hero__visual">
     <div class="hero__visual-frame">
-      <img class="hero__img" src="assets/img/collector-dark.jpg" alt="The First Movement Collection — collector edition with three clothbound books in candlelight">
+      <img class="hero__img" src="assets/img/book1-mockup.jpg" alt="पहली बारिश — First Rain, Book One of Ten, in candlelight beside a handwritten journal">
       <div class="hero__img-mask"></div>
       <div class="hero__caption">
-        <span>Photographed at the Solitude Ink press,<br/>Bombay · Mar 2026</span>
-        <span>Plate 01</span>
+        <span>Book One of Ten · पहली बारिश<br/>The doorway into the universe</span>
+        <span>I / X</span>
       </div>
     </div>
   </div>
 
   <div class="hero__scroll">
-    <span>Scroll to read</span>
+    <span>Enter slowly</span>
     <span class="hero__scroll-line"></span>
   </div>
 </section>
 
-<!-- ============ COLLECTOR EDITION ============ -->
-<section class="section collector" id="collector" data-screen-label="02 Collector">
+<!-- ============ 2 · THE PROMISE ============ -->
+<section class="section promise" id="promise" data-screen-label="02 Promise">
   <div class="wrap">
-    <div class="section-head reveal">
+    <div class="promise__grid">
+      <div class="promise__body reveal">
+        <span class="rule" style="margin-bottom:26px; display:inline-flex;">Why this matters</span>
+        <h2 class="section-head__title" style="margin:0 0 32px;">Some books are printed.<br><em>This one is pressed — once.</em></h2>
+        <p>आत्म-मिलन – आत्म-विरह is not a title we will reprint. It is a finite edition, numbered by hand, made in small pressings and held in small numbers. When the last set is claimed, the press closes the book. There is no second run, no anniversary reissue, no paperback to follow. The number on your set is the number it will always be.</p>
+        <p>We make it this way on purpose. A universe that took five years to write is not meant to be everywhere. It is meant to be <em style="font-style:italic; color:var(--gold-bright);">somewhere</em> — on one table, in one home, returned to on the quiet evenings.</p>
+      </div>
+      <div class="reveal reveal-delay-1">
+        <p class="promise__pull">Pressed once. When the last set is sold, the universe closes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · THE PRICE THAT RISES ============ -->
+<section class="section ladder" id="price" data-screen-label="03 Price ladder">
+  <div class="wrap">
+    <div class="section-head--center reveal" style="margin-bottom: clamp(44px,5vw,68px);">
+      <span class="rule rule--center">The Edition Price</span>
+      <h2 class="section-head__title" style="margin-top:18px;">The earlier you arrive,<br><em>the less you pay.</em></h2>
+      <p class="lede" style="margin: 26px auto 0; max-width: 62ch;">This edition does not go on sale. It does the opposite. It opens at $300 and climbs, in published steps, as the numbered sets are claimed — until it reaches $580 for the last sets in the pressing. The price you see is the price now. It only moves one way.</p>
+    </div>
+
+    <!-- Live status -->
+    <div class="ladder__live reveal">
       <div>
-        <span class="rule">The Collector Edition <span class="ornament"></span> 01</span>
-        <h2 class="section-head__title">A literary heirloom,<br><em>built to be remembered.</em></h2>
+        <p class="k">Reserved so far</p>
+        <p class="v sm"><span data-ed-claimed>340</span> <span style="font-size:16px; color:rgba(243,232,210,0.4);">/ <span data-ed-total>2,000</span></span></p>
+        <p class="sub">Your number would be <span data-ed-reserve-num>0341</span></p>
       </div>
-      <p class="section-head__body">A boxed set of three clothbound hardcovers, hand-stamped with gold foil and gathered in a premium slipcase. Included with each set: an author's note, ribbon markers, a numbered collector's card, and a quiet kind of permanence.</p>
-    </div>
-
-    <div class="collector__stage">
-      <div class="collector__hero-img reveal">
-        <img src="assets/img/collector-dark.jpg" alt="The First Movement Collection, candlelit collector edition with three hardcover books">
+      <div>
+        <p class="k">Current price</p>
+        <p class="v" data-ed-current>$300</p>
+        <p class="sub"><span data-ed-remaining-tier>160</span> sets remain at this price</p>
       </div>
-
-      <div class="collector__detail reveal reveal-delay-1">
-        <div>
-          <span class="eyebrow">Edition No. 01 · Pressing of 500</span>
-          <h3 class="display-l" style="margin: 14px 0 22px; line-height:1.05;">The First<br><em style="font-style:italic; color:var(--gold-bright);">Movement</em></h3>
-          <div class="collector__price">
-            <span class="collector__price-now">₹4,800</span>
-            <span class="collector__price-was">₹5,600</span>
-          </div>
-          <span class="collector__price-note">Pre-order pricing · Ships Monsoon 2026</span>
-
-          <div class="collector__includes">
-            <h4>Each Collector Set Includes</h4>
-            <ul>
-              <li><span>i</span>Three clothbound hardcovers <span>Books 1–3</span></li>
-              <li><span>ii</span>Premium slipcase with foil detailing <span>Hand-stamped</span></li>
-              <li><span>iii</span>Author's note <span>Signed by hand</span></li>
-              <li><span>iv</span>Three ribbon markers <span>One per book</span></li>
-              <li><span>v</span>Numbered collector's card <span>01–500</span></li>
-            </ul>
-          </div>
-
-          <div class="stock-bar">
-            <div class="stock-bar__track"><div class="stock-bar__fill" style="width: 32%;"></div></div>
-            <div class="stock-bar__meta">
-              <span>First Pressing</span>
-              <span class="stock-bar__count">158 of 500 remaining</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="buy-row" style="margin-top:32px;">
-          <a href="collector.html" class="btn btn--gold" style="flex:1;">
-            Own the Collection
-            <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
-          </a>
-          <a href="collector.html#detail" class="btn btn--ghost">Inspect</a>
-        </div>
+      <div>
+        <p class="k">Next step</p>
+        <p class="v sm" data-ed-next-no>No. 0501</p>
+        <p class="sub">then the price rises to the next rung</p>
       </div>
     </div>
+    <div class="ladder__progress reveal"><span data-ed-fill style="width:17%;"></span></div>
 
-    <!-- detail strip -->
-    <div class="craft__grid" style="margin-top: clamp(56px, 7vw, 100px);">
-      <div class="craft__cell reveal">
-        <img src="assets/img/collector-natural.jpg" alt="Natural slipcase detail">
-        <div class="craft__caption">
-          <span class="gold">Clothbound</span>
-          <h4>The case</h4>
-          <p>Slipcase with embossed foil, gathered for the shelf you return to.</p>
-        </div>
+    <!-- The ladder table -->
+    <div class="ladder__table reveal">
+      <div class="ladder__row" data-tier>
+        <span class="idx">i</span>
+        <span class="rng">No. 1 – 500</span>
+        <span class="price">$300</span>
+        <span class="tag">Opening</span>
       </div>
-      <div class="craft__cell reveal reveal-delay-1">
-        <img src="assets/img/book2-mockup.jpg" alt="Ribbon marker detail">
-        <div class="craft__caption">
-          <span class="gold">Ribbon</span>
-          <h4>The marker</h4>
-          <p>A silk ribbon stitched into each spine, in a colour chosen for its book.</p>
-        </div>
+      <div class="ladder__row" data-tier>
+        <span class="idx">ii</span>
+        <span class="rng">No. 501 – 1,000</span>
+        <span class="price">$370</span>
+        <span class="tag">Second rung</span>
       </div>
-      <div class="craft__cell reveal reveal-delay-2">
-        <img src="assets/img/collector-ivory.jpg" alt="Cream paper detail">
-        <div class="craft__caption">
-          <span class="gold">Paper</span>
-          <h4>The page</h4>
-          <p>Cream natural stock, warm and unhurried under candlelight.</p>
-        </div>
+      <div class="ladder__row" data-tier>
+        <span class="idx">iii</span>
+        <span class="rng">No. 1,001 – 1,500</span>
+        <span class="price">$440</span>
+        <span class="tag">Third rung</span>
       </div>
-      <div class="craft__cell reveal reveal-delay-3">
-        <img src="assets/img/book3-mockup.jpg" alt="Foil detail">
-        <div class="craft__caption">
-          <span class="gold">Foil</span>
-          <h4>The gold</h4>
-          <p>Antique foil pressed by hand into cloth and cover board alike.</p>
-        </div>
+      <div class="ladder__row" data-tier>
+        <span class="idx">iv</span>
+        <span class="rng">No. 1,501 – 1,900</span>
+        <span class="price">$510</span>
+        <span class="tag">Fourth rung</span>
       </div>
+      <div class="ladder__row" data-tier>
+        <span class="idx">v</span>
+        <span class="rng">Final 100 · No. 1,901 – 2,000</span>
+        <span class="price">$580</span>
+        <span class="tag">Closes the book</span>
+      </div>
+    </div>
+    <p class="ladder__note">The price never falls. Reserving your number locks today's price. No coupons, no private deals — the reader who arrives first is rewarded for arriving first.</p>
+
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="collector.html" class="btn btn--gold btn--lg">
+        Reserve my number — <span data-ed-current>$300</span>
+        <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- ============ BOOKS ============ -->
-<section class="section" id="books" data-screen-label="03 Books" style="background: linear-gradient(180deg, #0b0907 0%, #050402 100%);">
+<!-- ============ 4 · THE TWO EDITIONS ============ -->
+<section class="section" id="editions" data-screen-label="04 Editions" style="background: linear-gradient(180deg, #0b0907, #050402);">
   <div class="wrap">
-    <div class="section-head--center reveal" style="text-align:center; margin-bottom: clamp(48px, 6vw, 80px);">
-      <span class="rule rule--center">The Three Books <span class="ornament"></span> One Journey</span>
-      <h2 class="section-head__title" style="margin-top:18px;">Three movements<br>of one <em>inward weather.</em></h2>
+    <div class="section-head--center reveal" style="margin-bottom: clamp(44px,5vw,68px);">
+      <span class="rule rule--center">Choose how you keep it</span>
+      <h2 class="section-head__title" style="margin-top:18px;">Two ways to <em>own the whole.</em></h2>
     </div>
 
-    <!-- BOOK 1 -->
-    <article class="book reveal">
-      <div class="book__visual">
-        <div class="book__badge">Book One · Available</div>
-        <img src="assets/img/book1-mockup.jpg" alt="पहली बारिश Pehli Baarish — First Rain by Yatendra Chandra">
-      </div>
-      <div class="book__copy">
-        <div class="book__meta">
-          <span>I · Book One</span>
-          <span>54 Poems</span>
-          <span>Hardcover</span>
+    <div class="editions__grid">
+      <!-- Edition I -->
+      <article class="edition-card reveal">
+        <div class="edition-card__media">
+          <img src="assets/img/si-slipcase-dark.jpg" alt="The Hardcover Universe — ten clothbound books and a foil-stamped slipcase">
         </div>
-        <h3 class="book__title-deva">पहली बारिश</h3>
-        <p class="book__title-en">Pehli Baarish</p>
-        <p class="book__subtitle">First Rain — awakening, identity & the first stirrings of love.</p>
-        <p class="book__synopsis">A coming-of-age in verse. Pehli Baarish moves through the first rain of memory — the boy at the window, the girl who looked back, the names a young heart learns to whisper to itself before it knows the word for longing.</p>
-
-        <blockquote class="book__excerpt">
-          "मैं कविता लिखता हूँ,<br/>
-          तुम कविता जीती हो।<br/>
-          शब्द मेरे हैं, भाव तुम्हारे,<br/>
-          और कविता हमारी।"
-          <cite>— Poem 27, Pehli Baarish</cite>
-        </blockquote>
-
-        <div class="buy-row" style="margin-top:0;">
-          <a href="book-one.html" class="btn btn--gold">
-            Buy Book One — ₹1,280
+        <div class="edition-card__body">
+          <p class="edition-card__eyebrow">Edition I</p>
+          <h3 class="edition-card__title">The Hardcover <em>Universe</em></h3>
+          <p class="edition-card__kicker">Ten clothbound books · the complete work</p>
+          <p class="edition-card__desc">The full ten-book universe, each volume hand-bound in cloth and stamped in antique gold, gathered in a foil-pressed slipcase made for the shelf you return to. Includes the author's note and a certificate of authenticity.</p>
+          <div class="edition-card__price">
+            <span class="from">From</span>
+            <span class="amt" data-ed-hardcover>$300</span>
+            <span class="rise">rising to $580</span>
+          </div>
+          <button class="btn btn--ghost" data-add="hardcover">
+            Reserve the Hardcover Universe
             <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
-          </a>
-          <a href="book-one.html#read" class="btn btn--ghost">Read a poem</a>
+          </button>
         </div>
-      </div>
-    </article>
+      </article>
 
-    <!-- BOOK 2 -->
-    <article class="book book--reverse reveal">
-      <div class="book__visual">
-        <div class="book__badge" style="border-color: rgba(201,169,106,0.4); color: var(--gold);">Collector Edition Only</div>
-        <img src="assets/img/book2-mockup.jpg" alt="मानसी Manasi — Portrait of the Beloved by Yatendra Chandra">
-      </div>
-      <div class="book__copy">
-        <div class="book__meta">
-          <span>II · Book Two</span>
-          <span>48 Poems</span>
-          <span>Hardcover</span>
+      <!-- Edition II -->
+      <article class="edition-card edition-card--feature reveal reveal-delay-1">
+        <div class="edition-card__flag">Signed · Numbered</div>
+        <div class="edition-card__media">
+          <img src="assets/img/si-slipcase-ivory.jpg" alt="The Signature Numbered Universe — numbered and signed by hand">
         </div>
-        <h3 class="book__title-deva">मानसी</h3>
-        <p class="book__title-en">Manasi</p>
-        <p class="book__subtitle">Portrait of the Beloved — love, devotion, the feminine presence within every word.</p>
-        <p class="book__synopsis">A book of devotional verse, written for the imagined and the unforgotten. Manasi is the second movement — the long evening hour where memory begins to take a face, and the heart begins to answer.</p>
-
-        <blockquote class="book__excerpt">
-          "जिसके बिना<br/>
-          ये शब्द अधूरे थे,<br/>
-          वो तुम थे, जो हर शब्द में<br/>
-          मूर्ण होकर भी कहीं नहीं थे।"
-          <cite>— Poem 12, Manasi</cite>
-        </blockquote>
-
-        <div class="book__locked">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-          <span>Available exclusively in <em style="font-style:italic; color:var(--ivory);">The First Movement Collection.</em></span>
+        <div class="edition-card__body">
+          <p class="edition-card__eyebrow">Edition II</p>
+          <h3 class="edition-card__title">The Signature <em>Numbered Universe</em></h3>
+          <p class="edition-card__kicker">2,000 sets · numbered and signed by hand</p>
+          <p class="edition-card__desc">Everything in the Hardcover Universe, raised to its finest form: each set individually numbered, signed by the author, finished in a distinct binding, and presented with a hand-written note and a letterpress certificate. When the 2,000th set is claimed, this edition closes permanently.</p>
+          <div class="edition-card__price">
+            <span class="from">From</span>
+            <span class="amt" data-ed-signature>$600</span>
+            <span class="rise">rising to $880</span>
+          </div>
+          <button class="btn btn--gold" data-add="signature">
+            Reserve a Numbered Set
+            <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
+          </button>
         </div>
-      </div>
-    </article>
-
-    <!-- BOOK 3 -->
-    <article class="book reveal">
-      <div class="book__visual">
-        <div class="book__badge" style="border-color: rgba(201,169,106,0.4); color: var(--gold);">Collector Edition Only</div>
-        <img src="assets/img/book3-mockup.jpg" alt="नारी की आवाज़ Naari Ki Aawaaz — A Woman's Voice by Yatendra Chandra">
-      </div>
-      <div class="book__copy">
-        <div class="book__meta">
-          <span>III · Book Three</span>
-          <span>62 Poems</span>
-          <span>Hardcover</span>
-        </div>
-        <h3 class="book__title-deva">नारी की आवाज़</h3>
-        <p class="book__title-en">Naari Ki Aawaaz</p>
-        <p class="book__subtitle">A Woman's Voice — womanhood, dignity, emotional freedom, the right to be fully seen.</p>
-        <p class="book__synopsis">The closing movement. Poems of freedom and inheritance — written in the voice of women remembered, women imagined, and the long line of women whose silences were never silence at all.</p>
-
-        <blockquote class="book__excerpt">
-          "हम सिर्फ़ कहानियाँ नहीं,<br/>
-          हम चलती हुई नदियाँ हैं।<br/>
-          हम प्रार्थनाएँ नहीं,<br/>
-          हम पहला उत्तर हैं।"
-          <cite>— Poem 41, Naari Ki Aawaaz</cite>
-        </blockquote>
-
-        <div class="book__locked">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="11" width="16" height="10" rx="1"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
-          <span>Included exclusively in <em style="font-style:italic; color:var(--ivory);">the Collector Edition.</em></span>
-        </div>
-      </div>
-    </article>
+      </article>
+    </div>
+    <p class="editions__note">Both editions contain all ten books in full. The Signature edition adds hand-numbering, the author's signature, the written note, and the closing guarantee.</p>
   </div>
 </section>
 
-<!-- ============ IMMERSIVE / POEM READER ============ -->
-<section class="section immersive" id="immersive" data-screen-label="04 Immersive">
+<!-- ============ 5 · WHAT ARRIVES ============ -->
+<section class="section arrives" data-screen-label="05 What arrives">
+  <div class="wrap">
+    <div class="section-head--center reveal" style="margin-bottom: clamp(40px,5vw,64px);">
+      <span class="rule rule--center">In each set</span>
+      <h2 class="section-head__title" style="margin-top:18px;">A thing made <em>with the hands.</em></h2>
+    </div>
+
+    <div class="arrives__grid">
+      <div class="arrives__media reveal">
+        <img src="assets/img/si-slipcase-ivory.jpg" alt="The slipcase and ten clothbound spines in natural light">
+      </div>
+      <ul class="arrives__list reveal reveal-delay-1">
+        <li>
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 4h7v16H4zM13 4h7v16h-7z"/></svg></span>
+          <div><h4>Ten clothbound hardcovers <em>Books I–X</em></h4><p>The complete universe, each volume bound in cloth and stamped in antique gold.</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 3v18"/></svg></span>
+          <div><h4>A foil-stamped slipcase <em>Hand-pressed</em></h4><p>Heavy board, dressed in cloth, pressed by hand in antique gold.</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></span>
+          <div><h4>A certificate of authenticity <em>Recorded</em></h4><p>Your set's number, recorded and verifiable against the pressing.</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 4h16v14H7l-3 3z"/></svg></span>
+          <div><h4>A note from the author <em>Signature edition</em></h4><p>Hand-written, folded into the set — a few lines, in pencil, at night.</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 3h12v18l-6-4-6 4z"/></svg></span>
+          <div><h4>Silk ribbon markers <em>One per book</em></h4><p>Ten ribbons, each in a colour chosen for the voice of its movement.</p></div>
+        </li>
+        <li>
+          <span class="ic"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 5h16v14H4z"/><path d="M4 9h16"/></svg></span>
+          <div><h4>Cream natural paper <em>Made to last</em></h4><p>Warm to the eye, made to be returned to, made not to yellow.</p></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 · THE TEN MOVEMENTS ============ -->
+<section class="section movements" id="movements" data-screen-label="06 Ten movements">
+  <div class="wrap">
+    <div class="movements__intro reveal">
+      <span class="rule rule--center">Ten books · one journey</span>
+      <h2 class="section-head__title" style="margin: 18px 0 24px;">Ten movements of one<br><em>inward weather.</em></h2>
+      <p class="body" style="font-size:16px;">The universe opens with a first rain and closes with a slow melting. Between them, eight more movements — devotion, liberation, the body, separation, the philosophy of love, its many moods, a second language, and the long return of memory. Read in order, they are not ten books. They are one life, learning to feel itself.</p>
+    </div>
+
+    <div class="movements__list reveal">
+      <div class="mvmt">
+        <span class="mvmt__no">I</span>
+        <div><div class="mvmt__deva">पहली बारिश</div><div class="mvmt__en">First Rain</div></div>
+        <p class="mvmt__theme">awakening, and the first stirrings of love</p>
+        <span class="mvmt__tag">Rain</span>
+      </div>
+      <div class="mvmt">
+        <span class="mvmt__no">II</span>
+        <div><div class="mvmt__deva">मानसी</div><div class="mvmt__en">Manasi</div></div>
+        <p class="mvmt__theme">devotion, and the beloved who lives in the mind</p>
+        <span class="mvmt__tag">Devotion</span>
+      </div>
+      <div class="mvmt">
+        <span class="mvmt__no">III</span>
+        <div><div class="mvmt__deva">नारी की आवाज़</div><div class="mvmt__en">Naari Ki Aawaaz</div></div>
+        <p class="mvmt__theme">a woman's voice, and the right to be fully seen</p>
+        <span class="mvmt__tag">Voice</span>
+      </div>
+      <div class="mvmt">
+        <span class="mvmt__no">IV</span>
+        <div><div class="mvmt__deva">देह और आत्मा</div><div class="mvmt__en">Deh Aur Atma</div></div>
+        <p class="mvmt__theme">the body, and where the soul begins</p>
+        <span class="mvmt__tag">Body</span>
+      </div>
+      <div class="mvmt">
+        <span class="mvmt__no">V</span>
+        <div><div class="mvmt__deva">विरह रस</div><div class="mvmt__en">Virah Ras</div></div>
+        <p class="mvmt__theme">separation, and the strange sweetness of absence</p>
+        <span class="mvmt__tag">Absence</span>
+      </div>
+      <div class="mvmt">
+        <span class="mvmt__no">VI</span>
+        <div><div class="mvmt__deva">प्रेम का दर्शन</div><div class="mvmt__en">Prem Ka Darshan</div></div>
+        <p class="mvmt__theme">the philosophy of love</p>
+        <span class="mvmt__tag">Philosophy</span>
+      </div>
+      <div class="mvmt">
+        <span class="mvmt__no">VII</span>
+        <div><div class="mvmt__deva">प्रेम के रंग</div><div class="mvmt__en">Prem Ke Rang</div></div>
+        <p class="mvmt__theme">the moods of love — anger, jealousy, repair</p>
+        <span class="mvmt__tag">Moods</span>
+      </div>
+      <div class="mvmt">
+        <span class="mvmt__no">VIII</span>
+        <div><div class="mvmt__deva">अंग्रेज़ी में इश्क़</div><div class="mvmt__en">Angrezi Me Ishq</div></div>
+        <p class="mvmt__theme">the feelings that arrived in another tongue</p>
+        <span class="mvmt__tag">Tongue</span>
+      </div>
+      <div class="mvmt">
+        <span class="mvmt__no">IX</span>
+        <div><div class="mvmt__deva">यादों की बारिश</div><div class="mvmt__en">Yadon Ki Baarish</div></div>
+        <p class="mvmt__theme">memory, and the return of the first rain</p>
+        <span class="mvmt__tag">Memory</span>
+      </div>
+      <div class="mvmt">
+        <span class="mvmt__no">X</span>
+        <div><div class="mvmt__deva">रमना और पिघलना</div><div class="mvmt__en">Ramna Aur Pighalna</div></div>
+        <p class="mvmt__theme">to dwell, and to melt</p>
+        <span class="mvmt__tag">Melting</span>
+      </div>
+    </div>
+
+    <p class="movements__close reveal">The rain that opens Book One returns, as memory, in Book Nine. The tree that melts on the first page becomes, by the last, the self. <em>The universe remembers itself.</em></p>
+  </div>
+</section>
+
+<!-- ============ 7 · GIFTING ============ -->
+<section class="section gifting" data-screen-label="07 Gifting">
+  <div class="wrap">
+    <div class="gifting__grid">
+      <div class="gifting__media reveal">
+        <img src="assets/img/book3-mockup.jpg" alt="नारी की आवाज़ — a book presented for giving, in candlelight">
+      </div>
+      <div class="gifting__body reveal reveal-delay-1">
+        <span class="rule" style="margin-bottom:26px; display:inline-flex;">To give</span>
+        <h2 class="section-head__title" style="margin:0 0 30px;">A gift that <em>keeps its number.</em></h2>
+        <p>There are gifts that are used, and gifts that are kept. आत्म-मिलन – आत्म-विरह is made to be kept — a numbered, signed, finite object that does not date, does not depreciate, and does not appear in every second home.</p>
+        <p>For a milestone, a wedding, a farewell, or the person who already owns everything, it offers what is increasingly rare: something genuinely limited, beautifully made, and impossible to buy once the edition closes. Each set can carry a personal inscription alongside the author's note, and arrives presented for giving.</p>
+        <div class="gifting__actions">
+          <a href="collector.html" class="btn btn--gold">Add a personal inscription</a>
+          <a href="mailto:hello@solitudeink.in?subject=Gifting%20%26%20presentation" class="btn btn--ghost">Ask about gifting</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8 · AUTHENTICITY ============ -->
+<section class="section trust" id="authenticity" data-screen-label="08 Authenticity">
+  <div class="wrap">
+    <div class="section-head--center reveal">
+      <span class="rule rule--center">Every set is accounted for</span>
+      <h2 class="section-head__title" style="margin-top:18px;">Numbered. Signed. <em>Recorded.</em></h2>
+      <p class="lede" style="margin: 24px auto 0; max-width: 60ch;">Every set carries a hand-applied number and a certificate matched to it. The total pressing is fixed and published; we do not exceed it, and when it is complete, we say so. Your number is yours — on the set, on the certificate, and in the record.</p>
+    </div>
+
+    <div class="trust__grid">
+      <div class="trust__cell reveal">
+        <div class="seal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 2l2.5 5 5.5.8-4 3.9.9 5.5L12 14.5 7.1 17.2 8 11.7 4 7.8 9.5 7z"/></svg></div>
+        <h4>A number, <em>by hand</em></h4>
+        <p>Each set is hand-numbered from 1 to 2,000. The number on your set is the number it will always be — there is no re-issue to dilute it.</p>
+      </div>
+      <div class="trust__cell reveal reveal-delay-1">
+        <div class="seal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M3 17c3-6 6-9 9-9s4 2 4 4-2 4-4 4 1-4 4-6 5-2 5-2"/></svg></div>
+        <h4>A signature <em>& a note</em></h4>
+        <p>The Signature edition is signed by the author and accompanied by a hand-written note, folded into the set before it is sealed.</p>
+      </div>
+      <div class="trust__cell reveal reveal-delay-2">
+        <div class="seal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="16" rx="1"/><path d="M9 12l2 2 4-5"/></svg></div>
+        <h4>A certificate, <em>recorded</em></h4>
+        <p>A letterpress certificate of authenticity, matched to your number and held in the press's record. Verifiable, always.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9 · READ A POEM ============ -->
+<section class="section immersive" id="read" data-screen-label="09 Read a poem">
   <div class="wrap">
     <div class="section-head--center reveal" style="text-align:center;">
       <span class="rule rule--center">Read aloud, slowly</span>
       <h2 class="section-head__title" style="margin-top:18px;">Books for the<br><em>inward journey.</em></h2>
-      <p class="lede" style="margin: 28px auto 0; max-width: 60ch;">These are books to keep for years, to underline slowly, to gift carefully, and to return to when life becomes too loud.</p>
+      <p class="lede" style="margin: 26px auto 0; max-width: 62ch;">These are books to keep for years — to underline slowly, to gift carefully, to return to when the day becomes too loud. Sit with one before you decide. The work will tell you whether it is yours.</p>
     </div>
 
     <div class="poem-reader reveal" data-poem-reader>
       <div class="poem is-active">
-        <p class="poem__quote">"कभी शब्द कम पड़ जाते हैं,<br/>तब कविताऐं जन्म लेती हैं।"</p>
-        <p class="poem__en">"There are evenings when words run thin,<br>and the poems take their place."</p>
-        <p class="poem__cite">From the opening of Pehli Baarish</p>
+        <p class="poem__quote">कभी शब्द कम पड़ जाते हैं,<br/>तब कविताएँ जन्म लेती हैं।</p>
+        <p class="poem__en">There are evenings when words run thin,<br>and the poems take their place.</p>
+        <p class="poem__cite">From पहली बारिश · First Rain</p>
       </div>
       <div class="poem">
-        <p class="poem__quote">"वो बारिश थी,<br/>जो मेरे भीतर<br/>पहली बार रुकी।"</p>
-        <p class="poem__en">"It was a rain<br>that stopped, for the first time,<br>inside me."</p>
-        <p class="poem__cite">From Pehli Baarish · Poem 04</p>
+        <p class="poem__quote">तुम पास नहीं हो,<br/>फिर भी हर ख़ामोशी में<br/>तुम्हारा नाम बजता है।</p>
+        <p class="poem__en">You are not here,<br>yet in every silence<br>your name keeps ringing.</p>
+        <p class="poem__cite">From विरह रस · Virah Ras</p>
       </div>
       <div class="poem">
-        <p class="poem__quote">"तुम मेरी कविता नहीं,<br/>तुम वो ख़ामोशी हो<br/>जिसमें कविता जन्म लेती है।"</p>
-        <p class="poem__en">"You are not my poem.<br>You are the silence<br>in which a poem becomes possible."</p>
-        <p class="poem__cite">From Manasi · Poem 09</p>
+        <p class="poem__quote">तुम मेरी कविता नहीं,<br/>तुम वह ख़ामोशी हो<br/>जिसमें कविता जन्म लेती है।</p>
+        <p class="poem__en">You are not my poem.<br>You are the silence<br>in which a poem becomes possible.</p>
+        <p class="poem__cite">From मानसी · Manasi</p>
       </div>
       <div class="poem">
-        <p class="poem__quote">"मेरी आवाज़ कोई माँग नहीं,<br/>वो सिर्फ़ एक याद है<br/>उस औरत की जो भूली नहीं गई।"</p>
-        <p class="poem__en">"My voice is not a request.<br>It is the memory<br>of a woman who was never forgotten."</p>
-        <p class="poem__cite">From Naari Ki Aawaaz · Poem 16</p>
+        <p class="poem__quote">मैं पिघलता रहा,<br/>जब तक मैं और तुम<br/>एक ही पानी न हो गए।</p>
+        <p class="poem__en">I went on melting,<br>until you and I<br>were the same water.</p>
+        <p class="poem__cite">From रमना और पिघलना · Ramna Aur Pighalna</p>
       </div>
 
       <div class="poem-nav">
@@ -348,13 +487,12 @@
   </div>
 </section>
 
-<!-- ============ AUTHOR ============ -->
-<section class="section author" id="author" data-screen-label="05 Author">
+<!-- ============ 10 · AUTHOR ============ -->
+<section class="section author" id="author" data-screen-label="10 Author">
   <div class="wrap">
     <div class="author__grid">
       <div class="author__portrait reveal">
         <svg class="author__silhouette" viewBox="0 0 200 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Head & shoulders silhouette in gold -->
           <defs>
             <linearGradient id="goldgrad" x1="0%" y1="0%" x2="0%" y2="100%">
               <stop offset="0%" stop-color="#e6cd92"/>
@@ -363,7 +501,6 @@
           </defs>
           <path d="M100 50 C 75 50, 65 75, 70 100 C 73 120, 85 130, 100 130 C 115 130, 127 120, 130 100 C 135 75, 125 50, 100 50 Z" fill="url(#goldgrad)" opacity="0.85"/>
           <path d="M55 230 C 55 180, 75 145, 100 145 C 125 145, 145 180, 145 230 L 145 250 L 55 250 Z" fill="url(#goldgrad)" opacity="0.85"/>
-          <!-- collar detail -->
           <path d="M85 160 Q 100 175, 115 160" stroke="#0b0907" stroke-width="1.5" fill="none" opacity="0.5"/>
         </svg>
         <span class="author__sig">Yatendra</span>
@@ -371,14 +508,10 @@
 
       <div class="author__copy reveal reveal-delay-1">
         <span class="rule">The Author <span class="ornament"></span> Yatendra Chandra</span>
-        <h2>
-          A quiet voice<br>
-          <em>writing slowly,</em><br>
-          listening longer.
-        </h2>
+        <h2>A quiet voice,<br><em>writing slowly,</em><br>listening longer.</h2>
         <div class="author__bio">
           <p class="lede">Yatendra Chandra is a Hindi poet writing at the soft edges of memory, devotion, and the inner weather of a young country.</p>
-          <p>He began writing at fifteen, in the margins of school notebooks, between geometry and the rain. The First Movement is a collection of work composed slowly between 2013 and 2017 — three books for three voices that lived in him before he knew their names.</p>
+          <p>He began at fifteen, in the margins of school notebooks, between geometry and the rain. आत्म-मिलन – आत्म-विरह is the work of four winters and three monsoons, composed between 2013 and 2017 — ten books for the voices that lived in him before he knew their names.</p>
           <p>He lives in Bombay, keeps a journal in pencil, and reads aloud only at night.</p>
         </div>
 
@@ -388,8 +521,8 @@
             <p>"A poem is a slow door. You don't open it. You stand near it, until it remembers you."</p>
           </div>
           <div>
-            <h5>Years of Work</h5>
-            <p>"Four winters, three monsoons, one quiet hand. The dates on each book are not when they were finished — they are when they let me go."</p>
+            <h5>Five Years of Work</h5>
+            <p>"The dates on each book are not when they were finished — they are when they let me go."</p>
           </div>
         </div>
       </div>
@@ -397,130 +530,22 @@
   </div>
 </section>
 
-<!-- ============ REVIEWS ============ -->
-<section class="section reviews" id="reviews" data-screen-label="06 Reviews">
-  <div class="wrap">
-    <div class="section-head--center reveal">
-      <span class="rule rule--center">Letters Received</span>
-      <h2 class="section-head__title" style="margin-top:18px;">In the words of <em>those who read.</em></h2>
-    </div>
-  </div>
-
-  <div class="reviews__grid">
-    <div class="review reveal">
-      <div class="review__mark">"</div>
-      <p class="review__quote">A collection that feels like memory itself — soft at the centre, sharp at the edges, never in a hurry.</p>
-      <div class="review__src">
-        <strong>Anaisha Roy</strong>
-        <span>The Bombay Review</span>
-      </div>
-    </div>
-    <div class="review reveal reveal-delay-1">
-      <div class="review__mark">"</div>
-      <p class="review__quote">These books are not read. They are lived. Chandra writes the way a candle burns — patient, warm, with a small wick of grief.</p>
-      <div class="review__src">
-        <strong>Devansh Kapoor</strong>
-        <span>Editor, The Inland Letter</span>
-      </div>
-    </div>
-    <div class="review reveal reveal-delay-2">
-      <div class="review__mark">"</div>
-      <p class="review__quote">Beautifully crafted, emotionally devastating. I read the first book in a single sitting and then walked outside in the rain.</p>
-      <div class="review__src">
-        <strong>Meher Sethi</strong>
-        <span>Reader · Mumbai</span>
-      </div>
-    </div>
-    <div class="review reveal">
-      <div class="review__mark">"</div>
-      <p class="review__quote">The collector edition is a quiet luxury — clothbound, gold-foiled, weighted right. A book that makes a room feel older.</p>
-      <div class="review__src">
-        <strong>Ritu Menon</strong>
-        <span>Independent Bookstore, Delhi</span>
-      </div>
-    </div>
-    <div class="review reveal reveal-delay-1">
-      <div class="review__mark">"</div>
-      <p class="review__quote">Naari Ki Aawaaz is one of the bravest pieces of contemporary Hindi verse I have read in years.</p>
-      <div class="review__src">
-        <strong>Prof. Kaveri Banerjee</strong>
-        <span>JNU Centre for Indian Literature</span>
-      </div>
-    </div>
-    <div class="review reveal reveal-delay-2">
-      <div class="review__mark">"</div>
-      <p class="review__quote">I gifted the collection to my mother. She has not spoken about it. She just keeps it on the table where she takes her tea.</p>
-      <div class="review__src">
-        <strong>Saanvi Iyer</strong>
-        <span>Reader · Bangalore</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CRAFT ============ -->
-<section class="section craft" data-screen-label="07 Craft">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div>
-        <span class="rule">The Object <span class="ornament"></span> Craft</span>
-        <h2 class="section-head__title">A book is a thing<br>made <em>with the hands.</em></h2>
-      </div>
-      <p class="section-head__body">Every aspect of the collector edition has been considered for permanence — cloth that ages well, paper that does not yellow, ribbons that mark not pages but hours of return.</p>
-    </div>
-
-    <div class="craft__grid">
-      <div class="craft__cell reveal">
-        <img src="assets/img/collector-dark.jpg" alt="Clothbound spines in candlelight">
-        <div class="craft__caption">
-          <span class="gold">01 · Cloth</span>
-          <h4>Hand-bound spines</h4>
-          <p>Linen-cotton blend, dyed in indigo, moss, maroon — chosen to age in your hand.</p>
-        </div>
-      </div>
-      <div class="craft__cell reveal reveal-delay-1">
-        <img src="assets/img/collector-ivory.jpg" alt="Slipcase exterior">
-        <div class="craft__caption">
-          <span class="gold">02 · Slipcase</span>
-          <h4>Foil-stamped sleeve</h4>
-          <p>Heavy board, dressed in ivory cloth and pressed by hand with antique gold.</p>
-        </div>
-      </div>
-      <div class="craft__cell reveal reveal-delay-2">
-        <img src="assets/img/collector-natural.jpg" alt="Page detail">
-        <div class="craft__caption">
-          <span class="gold">03 · Page</span>
-          <h4>Cream natural paper</h4>
-          <p>Warm to the eye, soft to the thumb. A page made to be returned to.</p>
-        </div>
-      </div>
-      <div class="craft__cell reveal reveal-delay-3">
-        <img src="assets/img/book2-mockup.jpg" alt="Bookmark detail">
-        <div class="craft__caption">
-          <span class="gold">04 · Marker</span>
-          <h4>Silk ribbon bookmarks</h4>
-          <p>One per book, in a colour chosen for its voice. Sewn into the binding by hand.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="final" data-screen-label="08 Final">
-  <div class="final__particles" data-particles="20"></div>
+<!-- ============ 11 · FINAL CALL ============ -->
+<section class="final" data-screen-label="11 Final call">
+  <div class="final__particles" data-particles="22"></div>
   <span class="rule rule--center" style="display:flex; justify-content:center;">An ending, of sorts</span>
   <h2 class="final__title">Some journeys are not travelled.<br><em>They are remembered.</em></h2>
-  <p class="final__sub">When the noise of the day softens, these are the books that remain on the table — unhurried, warm, waiting.</p>
+  <p class="final__sub">When the noise of the day softens, these are the books that remain on the table — unhurried, warm, waiting. The edition is open now, at the lowest price it will ever be, with its numbers still close to the beginning.</p>
   <div class="final__ctas">
-    <a href="collector.html" class="btn btn--gold btn--lg">Buy Collector Edition
+    <a href="collector.html" class="btn btn--gold btn--lg">Reserve your number — <span data-ed-current>$300</span>
       <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
     </a>
-    <a href="book-one.html" class="btn btn--ghost btn--lg">Begin With Book One</a>
+    <a href="#read" class="btn btn--ghost btn--lg">Read a poem first</a>
   </div>
+  <p class="small" style="margin-top:28px; position:relative; z-index:2;"><span data-ed-reserve-no>No. 0341</span> of <span data-ed-total>2,000</span> · the price only rises from here.</p>
 </section>
 
-<!-- ============ FOOTER ============ -->
+<!-- ============ 12 · FOOTER ============ -->
 <footer class="footer">
   <div class="footer__grid">
     <div class="footer__brand">
@@ -530,40 +555,39 @@
         <ellipse cx="13" cy="24" rx="6" ry="2" stroke="currentColor" stroke-width="1" fill="none"/>
         <path d="M13 26L13 30L11.5 30" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
       </svg>
-      <h3>Solitude Ink</h3>
-      <p>Books for the inward journey. An independent poetry press, pressing in small numbers, for readers who feel deeply.</p>
-      <span class="small">© 2026 Solitude Ink Publishing House · Bombay</span>
+      <h3>आत्म-मिलन – आत्म-विरह</h3>
+      <p>A finite literary universe. Pressed once, in small numbers, for readers who keep what they love.</p>
+      <span class="small">© 2026 Solitude Ink · The edition is limited to 2,000 numbered sets and will not be reprinted.</span>
     </div>
     <div class="footer__col">
-      <h5>The Press</h5>
+      <h5>The Edition</h5>
       <ul>
-        <li><a href="collector.html">Collector Edition</a></li>
-        <li><a href="book-one.html">Book One — Pehli Baarish</a></li>
-        <li><a href="#author">The Author</a></li>
-        <li><a href="#immersive">Read a Poem</a></li>
+        <li><a href="collector.html">The Hardcover Universe</a></li>
+        <li><a href="collector.html">The Signature Numbered Universe</a></li>
+        <li><a href="#price">The Price Ladder</a></li>
+        <li><a href="#authenticity">Authenticity &amp; Numbering</a></li>
       </ul>
     </div>
     <div class="footer__col">
-      <h5>Care</h5>
+      <h5>To Keep</h5>
       <ul>
-        <li><a href="#">Shipping & Delivery</a></li>
-        <li><a href="#">Returns & Exchanges</a></li>
-        <li><a href="#">Book Care Guide</a></li>
-        <li><a href="#">Wholesale Enquiries</a></li>
+        <li><a href="#">Worldwide white-glove delivery</a></li>
+        <li><a href="#">Gifting &amp; inscription</a></li>
+        <li><a href="#">Book care</a></li>
+        <li><a href="#">The closing date</a></li>
       </ul>
     </div>
     <div class="footer__col">
-      <h5>Reach Us</h5>
+      <h5>Reach</h5>
       <ul>
         <li><a href="mailto:hello@solitudeink.in">hello@solitudeink.in</a></li>
         <li><a href="#">Instagram</a></li>
         <li><a href="#">Substack — Letters</a></li>
-        <li><a href="#">Press & Reviews</a></li>
       </ul>
     </div>
   </div>
   <div class="footer__bottom">
-    <span>Solitude Ink · Books for the Inward Journey</span>
+    <span>Solitude Ink · आत्म-मिलन – आत्म-विरह · Pressed once</span>
     <div class="footer__bottom-links">
       <a href="#">Privacy</a>
       <a href="#">Terms</a>
@@ -574,9 +598,9 @@
 
 <!-- ============ CART DRAWER ============ -->
 <div class="cart-overlay" data-cart-overlay></div>
-<aside class="cart" data-cart aria-label="Reading list">
+<aside class="cart" data-cart aria-label="Your reservations">
   <div class="cart__head">
-    <h3>Your Reading List <em>· a quiet basket</em></h3>
+    <h3>Your Reservations <em>· numbers held</em></h3>
     <button class="cart__close" data-cart-close aria-label="Close">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
@@ -584,13 +608,13 @@
   <div class="cart__body" data-cart-body></div>
   <div class="cart__foot">
     <div class="cart__row"><span>Subtotal</span><span data-cart-subtotal>—</span></div>
-    <div class="cart__row"><span>Shipping</span><span data-cart-ship>—</span></div>
+    <div class="cart__row"><span>White-glove delivery</span><span data-cart-ship>—</span></div>
     <div class="cart__row total"><span>Total</span><span data-cart-total>—</span></div>
     <a href="checkout.html" class="btn btn--gold btn--lg" data-cart-checkout style="width:100%; margin-top:16px;">
-      Proceed to Checkout
+      Reserve &amp; Check Out
       <svg class="arrow" width="14" height="10" viewBox="0 0 14 10" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M1 5h12M9 1l4 4-4 4"/></svg>
     </a>
-    <p class="small" style="text-align:center; margin: 14px 0 0; line-height:1.6;">Complimentary shipping on orders above ₹3,000.<br/>Pre-orders ship from Monsoon 2026.</p>
+    <p class="small" style="text-align:center; margin: 14px 0 0; line-height:1.6;">Reserving locks today's price. Worldwide white-glove delivery, included.</p>
   </div>
 </aside>
 
